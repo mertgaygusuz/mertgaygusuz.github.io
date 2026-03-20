@@ -8,7 +8,7 @@ export const translations = {
     },
     hero: {
       title: 'Mert Gaygusuz',
-      role: 'React Native Developer | iOS (Swift) & .NET',
+      role: 'React Native & iOS Developer',
       bio: 'I am a React Native Developer with over 2 years of .NET Back-End experience, now fully focused on mobile development. Currently, I code modern interfaces and architect mobile-to-backend API integrations to transition the web capabilities of the F4e platform to mobile. In my professional projects, I build cross-platform applications by combining my strong foundation in backend architecture with React Native. Simultaneously, I continuously deepen my expertise in the native iOS ecosystem by developing personal projects using Swift and SwiftUI. My ultimate goal is to master modern mobile technologies and deliver high-quality, user-centric products from end to end.',
       location: 'Istanbul, Turkey',
       email: 'mertgaygusuz@hotmail.com',
@@ -129,8 +129,8 @@ export const translations = {
     },
     hero: {
       title: 'Mert Gaygusuz',
-      role: 'React Native Developer | iOS (Swift) & .NET',
-      bio: "2 yılı aşkın .NET Back-End tecrübesine sahip, şu an odağını tamamen mobil geliştirmeye çevirmiş bir React Native Developer'ım. F4e platformunun web yeteneklerini mobile taşımak amacıyla modern arayüzler kodluyor ve mobil-backend arasındaki API entegrasyonlarını kurguluyorum. Profesyonel projelerde arka uç mimarisindeki temelimi React Native ile birleştirerek cross-platform uygulamalar geliştiriyor; eş zamanlı olarak Swift ve SwiftUI üzerine bireysel projeler üreterek native iOS ekosistemindeki yetkinliklerimi de sürekli derinleştiriyorum. Temel hedefim, modern mobil teknolojilerde uzmanlaşarak uçtan uca kaliteli ve kullanıcı odaklı ürünler ortaya çıkarmak.",
+      role: 'React Native & iOS Developer',
+      bio: "2 yılı aşkın .NET Back-End tecrübesine sahip, şu an odağını tamamen mobil geliştirmeye çevirmiş bir React Native Developer'ım. F4e platformunun web yeteneklerini mobile taşımak amacıyla modern arayüzler kodluyor ve mobil-backend arasındaki API entegrasyonlarını kurguluyorum. Profesyonel projelerde arka uç mimarisindeki temelimi React Native ile birleştirerek cross-platform uygulamalar geliştiriyor; eş zamanlı olarak Swift ve SwiftUI üzerine bireysel projeler üreterek native iOS ekosistemindeki yetkinliklerimi de sürekli derinleştiriyorum. Temel hedefim, modern mobil teknolojilerde uzmanlaşarak uçtan uca kaliteli ve kullanıcı odaklı ürünler ortaya çıkarmak.",      
       location: 'İstanbul, Türkiye',
       email: 'mertgaygusuz@hotmail.com',
       phone: '+90 537 451 2329',

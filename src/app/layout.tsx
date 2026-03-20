@@ -7,8 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const notoSerif = Noto_Serif({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-noto-serif' })
 
 export const metadata: Metadata = {
-  title: 'Mert Gaygusuz — React Native Developer',
-  description: 'React Native Developer | iOS & .NET',
+  title: 'Mert Gaygusuz — React Native & iOS Developer',
+  description: 'React Native & iOS Developer | Mobile-first, backend-rooted.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
