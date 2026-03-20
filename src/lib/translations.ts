@@ -16,6 +16,8 @@ export const translations = {
     },
     skills: {
       title: 'Skills',
+      reactNativeDesc: 'Cross-platform development with native bridge optimization.',
+      apiDesc: 'High performance endpoint design.',
       groups: [
         { label: 'Mobile', items: ['React Native', 'Swift', 'SwiftUI', 'UIKit'] },
         { label: 'Languages', items: ['JavaScript', 'TypeScript', 'C#'] },
@@ -137,6 +139,8 @@ export const translations = {
     },
     skills: {
       title: 'Beceriler',
+      reactNativeDesc: 'Native bridge optimizasyonuyla cross-platform geliştirme.',
+      apiDesc: 'Yüksek performanslı endpoint tasarımı.',
       groups: [
         { label: 'Mobil', items: ['React Native', 'Swift', 'SwiftUI', 'UIKit'] },
         { label: 'Diller', items: ['JavaScript', 'TypeScript', 'C#'] },

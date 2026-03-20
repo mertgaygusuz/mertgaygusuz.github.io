@@ -8,6 +8,7 @@ export function Navbar() {
   const { theme, setTheme } = useTheme()
   const { lang, t, setLang } = useLanguage()
   const [mounted, setMounted] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
@@ -53,16 +54,58 @@ export function Navbar() {
           )}
         </div>
 
-        {/* Mobile menu icon */}
-        <div className="md:hidden flex items-center gap-4">
-          <div className="flex items-center gap-1 font-label text-xs">
-            <button onClick={() => setLang('tr')} className={`px-1 transition-colors ${lang === 'tr' ? 'text-on-surface' : 'text-on-surface-variant'}`}>TR</button>
-            <span className="text-outline-variant">|</span>
-            <button onClick={() => setLang('en')} className={`px-1 transition-colors ${lang === 'en' ? 'text-on-surface' : 'text-on-surface-variant'}`}>EN</button>
-          </div>
-          <span className="material-symbols-outlined text-primary">menu</span>
-        </div>
+        {/* Mobile menu button */}
+        <button
+          className="md:hidden text-on-surface-variant"
+          onClick={() => setMobileOpen(prev => !prev)}
+          aria-label="Toggle menu"
+        >
+          <span className="material-symbols-outlined text-primary">
+            {mobileOpen ? 'close' : 'menu'}
+          </span>
+        </button>
       </div>
+
+      {/* Mobile dropdown */}
+      {mobileOpen && (
+        <div className="md:hidden bg-background/97 backdrop-blur-xl border-t border-outline-variant/30 px-8 py-6 flex flex-col gap-1">
+          {[
+            { href: '#work', label: t.nav.projects },
+            { href: '#skills', label: t.nav.skills },
+            { href: '#experience', label: t.nav.experience },
+            { href: '#contact', label: t.nav.contact },
+          ].map(({ href, label }) => (
+            <a
+              key={href}
+              href={href}
+              onClick={() => setMobileOpen(false)}
+              className="text-on-surface-variant hover:text-on-surface font-label text-sm uppercase tracking-widest py-3 border-b border-outline-variant/20 transition-colors duration-200"
+            >
+              {label}
+            </a>
+          ))}
+
+          <div className="flex items-center justify-between pt-4 mt-1">
+            <div className="flex items-center gap-1 font-label text-xs">
+              <button onClick={() => setLang('tr')} className={`px-2 py-1 transition-colors ${lang === 'tr' ? 'text-on-surface font-bold' : 'text-on-surface-variant'}`}>TR</button>
+              <span className="text-outline-variant">|</span>
+              <button onClick={() => setLang('en')} className={`px-2 py-1 transition-colors ${lang === 'en' ? 'text-on-surface font-bold' : 'text-on-surface-variant'}`}>EN</button>
+            </div>
+
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="text-on-surface-variant hover:text-on-surface cursor-pointer transition-colors"
+                aria-label="Toggle theme"
+              >
+                <span className="material-symbols-outlined text-xl leading-none">
+                  {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+                </span>
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </nav>
   )
 }
