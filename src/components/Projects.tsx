@@ -4,9 +4,9 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 const PROJECT_META = [
-  { tags: 'UIKit / TheMovieDB / MVVM', gradient: 'from-[#1a1a2e] to-[#0d0d14]' },
-  { tags: 'SwiftUI / Alamofire / MVC', gradient: 'from-[#0d1117] to-[#14141f]' },
-  { tags: '.NET / MongoDB / REST', gradient: 'from-[#0f1923] to-[#0d1117]' },
+  { tags: 'UIKit / TheMovieDB / MVVM', gradient: 'from-[#1a1a2e] to-[#0d0d14]', github: 'https://github.com/mertgaygusuz/MoviesChallenge' },
+  { tags: 'SwiftUI / Alamofire / MVC', gradient: 'from-[#0d1117] to-[#14141f]', github: 'https://github.com/mertgaygusuz/ChatGPTApp' },
+  { tags: '.NET / MongoDB / REST', gradient: 'from-[#0f1923] to-[#0d1117]', github: 'https://github.com/mertgaygusuz/DotnetAndMongoDbCase' },
 ]
 
 export function Projects() {
@@ -58,9 +58,15 @@ export function Projects() {
                       {project.bullets[0]}
                     </p>
                   </div>
-                  <button className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors shrink-0 ml-4">
+                  <a
+                    href={PROJECT_META[i].github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors shrink-0 ml-4"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     <span className="material-symbols-outlined text-on-surface text-xl">open_in_new</span>
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>
