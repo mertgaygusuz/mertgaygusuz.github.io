@@ -7,6 +7,7 @@ const PROJECT_META = [
   { tags: 'UIKit / TheMovieDB / MVVM', gradient: 'from-[#1a1a2e] to-[#0d0d14]', github: 'https://github.com/mertgaygusuz/MoviesChallenge' },
   { tags: 'SwiftUI / Alamofire / MVC', gradient: 'from-[#0d1117] to-[#14141f]', github: 'https://github.com/mertgaygusuz/ChatGPTApp' },
   { tags: '.NET / MongoDB / REST', gradient: 'from-[#0f1923] to-[#0d1117]', github: 'https://github.com/mertgaygusuz/DotnetAndMongoDbCase' },
+  { tags: 'Python / LangChain / Gemini', gradient: 'from-[#0a1628] to-[#0d1117]', github: 'https://github.com/mertgaygusuz/nl2sql-agent' },
 ]
 
 export function Projects() {
@@ -29,7 +30,7 @@ export function Projects() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {t.projects.items.map((project, i) => (
             <motion.div
               key={i}

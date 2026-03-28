@@ -111,6 +111,13 @@ export const translations = {
             'Developed rapid CRUD operations leveraging NoSQL flexibility and optimized data flow across various API modules.',
           ],
         },
+        {
+          title: 'AI-Powered SQL Agent',
+          bullets: [
+            'Built an AI assistant that translates natural language queries into MS SQL Server statements using a dual-chain LangChain architecture with Google Gemini 2.5 Flash.',
+            'Implemented an in-memory schema caching mechanism (Turbo Mode) that reduced average query response time by 80%, with enforced read-only access for production-safe operation.',
+          ],
+        },
       ],
     },
     contact: {
@@ -232,6 +239,13 @@ export const translations = {
           bullets: [
             '.NET ve C# kullanarak, MongoDB veritabanı üzerinde veri yönetimi sağlayan güvenli ve ölçeklenebilir bir RESTful Web API tasarlamak.',
             "NoSQL esnekliğinden faydalanarak hızlı CRUD operasyonları geliştirmek ve API'nin farklı modülleri arasındaki veri akışını optimize etmek.",
+          ],
+        },
+        {
+          title: 'Yapay Zeka Destekli SQL Ajan',
+          bullets: [
+            'Google Gemini 2.5 Flash ile çift zincirli LangChain mimarisi kullanarak doğal dil sorgularını MS SQL Server komutlarına dönüştüren bir yapay zeka asistanı geliştirmek.',
+            'Ortalama sorgu yanıt süresini %80 azaltan bellek içi şema önbellekleme mekanizması (Turbo Mode) uygulamak ve üretim ortamı güvenliği için yalnızca okuma erişimini zorlamak.',
           ],
         },
       ],
