@@ -95,7 +95,7 @@ export function Experience() {
             04 / {t.certificates.title.toUpperCase()}
           </p>
           {t.certificates.items.map((cert, i) => (
-            <div key={i} className="glass-panel p-8 rounded-xl border border-outline-variant/10">
+            <div key={i} className="glass-panel p-8 rounded-xl border border-outline-variant/30">
               <h3 className="text-xl font-headline font-bold text-on-surface">{cert.name}</h3>
               <p className="text-primary mt-1 text-sm">{cert.issuer}</p>
               <p className="text-on-surface-variant mt-2">{cert.description}</p>

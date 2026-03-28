@@ -41,7 +41,7 @@ export function Projects() {
               className={`group relative aspect-[4/5] overflow-hidden bg-gradient-to-b ${PROJECT_META[i].gradient} rounded-xl cursor-pointer`}
             >
               {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
               {/* Decorative grid pattern */}
               <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(rgba(198,198,206,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(198,198,206,0.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
@@ -52,10 +52,10 @@ export function Projects() {
                     <p className="text-tertiary font-label text-[10px] uppercase tracking-[0.2em] mb-2">
                       {PROJECT_META[i].tags}
                     </p>
-                    <h3 className="text-2xl font-headline font-bold text-on-surface leading-tight">
+                    <h3 className="text-2xl font-headline font-bold text-white leading-tight">
                       {project.title}
                     </h3>
-                    <p className="text-xs text-on-surface-variant mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-xs text-white/60 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {project.bullets[0]}
                     </p>
                   </div>

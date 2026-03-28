@@ -92,7 +92,8 @@ body {
 }
 
 .dark .glass-panel {
-  background: rgba(37, 38, 38, 0.6);
+  background: rgba(55, 57, 57, 0.85);
+  border-color: rgba(255, 255, 255, 0.08);
 }
 
 :not(.dark) .glass-panel {
