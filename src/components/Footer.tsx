@@ -1,6 +1,11 @@
 'use client'
 
+import { useLanguage } from '@/context/LanguageContext'
+
 export function Footer() {
+  const { lang } = useLanguage()
+  const isEn = lang === 'en'
+
   return (
     <footer className="bg-surface-container-lowest py-20 px-6 border-t border-outline-variant/10">
       <div className="max-w-7xl mx-auto">
@@ -22,7 +27,7 @@ export function Footer() {
           {/* Links + availability */}
           <div className="md:col-span-8 flex flex-wrap justify-start md:justify-end gap-12">
             <div className="flex flex-col gap-4">
-              <span className="font-label text-xs text-outline uppercase tracking-widest">Connect</span>
+              <span className="font-label text-xs text-outline uppercase tracking-widest">{isEn ? 'Connect' : 'Bağlantı'}</span>
               <div className="flex gap-6">
                 <a
                   href="https://linkedin.com/in/mertgaygusuz"
@@ -50,10 +55,10 @@ export function Footer() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <span className="font-label text-xs text-outline uppercase tracking-widest">Availability</span>
+              <span className="font-label text-xs text-outline uppercase tracking-widest">{isEn ? 'Availability' : 'Durum'}</span>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-green-500" />
-                <span className="text-on-surface font-bold font-label">Ready for new projects</span>
+                <span className="text-on-surface font-bold font-label">{isEn ? 'Ready for new projects' : 'Yeni projelere açık'}</span>
               </div>
             </div>
           </div>

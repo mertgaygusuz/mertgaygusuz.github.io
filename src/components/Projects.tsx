@@ -35,7 +35,8 @@ const PROJECT_META = [
 ]
 
 export function Projects() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const isEn = lang === 'en'
 
   return (
     <section className="bg-surface-container py-32 px-6" id="work">
@@ -47,10 +48,10 @@ export function Projects() {
           className="mb-20"
         >
           <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
-            Portfolio Highlights
+            {isEn ? 'Portfolio Highlights' : 'Öne Çıkan Projeler'}
           </span>
           <h2 className="text-6xl font-black tracking-tighter">
-            {t.projects.title === 'Personal Projects' ? 'Digital Builds' : 'Projeler'}
+            {isEn ? 'Digital Builds' : 'Projeler'}
           </h2>
         </motion.div>
 
@@ -99,7 +100,7 @@ export function Projects() {
                     rel="noopener noreferrer"
                     className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all ${linkColor}`}
                   >
-                    {t.projects.title === 'Personal Projects' ? 'Explore Project' : 'Projeyi İncele'}
+                    {isEn ? 'Explore Project' : 'Projeyi İncele'}
                     <span className="material-symbols-outlined text-base">open_in_new</span>
                   </a>
                 </div>

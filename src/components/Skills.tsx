@@ -13,7 +13,8 @@ const SKILLS = [
 ]
 
 export function Skills() {
-  const { t } = useLanguage()
+  const { lang } = useLanguage()
+  const isEn = lang === 'en'
 
   return (
     <section className="bg-surface-container-low py-24 px-6" id="skills">
@@ -27,14 +28,14 @@ export function Skills() {
         >
           <div>
             <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
-              Core Competencies
+              {isEn ? 'Core Competencies' : 'Temel Yetkinlikler'}
             </span>
             <h2 className="text-5xl font-black tracking-tight">
-              {t.skills.title === 'Skills' ? 'Technical Arsenal' : 'Teknik Yetenekler'}
+              {isEn ? 'Technical Skills' : 'Teknik Yetenekler'}
             </h2>
           </div>
           <p className="text-on-surface-variant max-w-sm font-label">
-            {t.skills.title === 'Skills'
+            {isEn
               ? 'A diverse stack focused on building robust, scalable, and delightful mobile solutions.'
               : 'Güçlü, ölçeklenebilir ve etkileyici mobil çözümler üretmeye odaklanan geniş bir teknoloji yelpazesi.'}
           </p>

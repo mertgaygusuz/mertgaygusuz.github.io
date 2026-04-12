@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 export function Experience() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const isEn = lang === 'en'
 
   return (
     <section className="py-32 px-6" id="experience">
@@ -15,13 +16,13 @@ export function Experience() {
           <div className="lg:col-span-4">
             <div className="sticky top-32">
               <span className="font-label text-secondary uppercase tracking-[0.3em] text-sm block mb-4">
-                Professional History
+                {isEn ? 'Professional History' : 'Kariyer Geçmişi'}
               </span>
               <h2 className="text-6xl font-black tracking-tighter mb-8 leading-none">
-                {t.experience.title === 'Work Experience' ? 'The\nJourney' : 'Kariyer'}
+                {isEn ? 'The Journey' : 'Kariyer'}
               </h2>
               <p className="text-on-surface-variant text-lg font-label">
-                {t.experience.title === 'Work Experience'
+                {isEn
                   ? 'A chronological evolution through the tech ecosystem.'
                   : 'Teknoloji ekosistemindeki kronolojik bir gelişim yolculuğu.'}
               </p>

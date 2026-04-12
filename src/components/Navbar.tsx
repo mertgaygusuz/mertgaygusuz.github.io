@@ -13,14 +13,14 @@ export function Navbar() {
   useEffect(() => setMounted(true), [])
 
   return (
-    <header className="fixed top-0 z-50 w-full glass-nav border-b border-outline-variant/10">
+    <header className="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/90 border-b border-outline-variant/20">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 hero-gradient flex items-center justify-center rounded-xl">
             <span className="font-black text-on-primary-fixed text-xl">M</span>
           </div>
-          <span className="font-label font-bold tracking-tighter text-xl uppercase">Gaygusuz</span>
+          <span className="font-label font-bold tracking-tighter text-xl uppercase text-on-surface">Gaygusuz</span>
         </div>
 
         {/* Desktop Nav */}
@@ -88,7 +88,7 @@ export function Navbar() {
               key={href}
               href={href}
               onClick={() => setMobileOpen(false)}
-              className="text-on-surface-variant hover:text-primary font-label text-sm uppercase tracking-widest py-3 border-b border-outline-variant/20 transition-colors duration-200"
+              className="text-on-surface-variant hover:text-primary font-label text-sm uppercase tracking-widest py-3 border-b border-outline-variant/20 transition-colors"
             >
               {label}
             </a>
