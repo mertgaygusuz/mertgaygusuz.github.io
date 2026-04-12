@@ -4,74 +4,108 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 const PROJECT_META = [
-  { tags: 'UIKit / TheMovieDB / MVVM', gradient: 'from-[#1a1a2e] to-[#0d0d14]', github: 'https://github.com/mertgaygusuz/MoviesChallenge' },
-  { tags: 'SwiftUI / Alamofire / MVC', gradient: 'from-[#0d1117] to-[#14141f]', github: 'https://github.com/mertgaygusuz/ChatGPTApp' },
-  { tags: '.NET / MongoDB / REST', gradient: 'from-[#0f1923] to-[#0d1117]', github: 'https://github.com/mertgaygusuz/DotnetAndMongoDbCase' },
-  { tags: 'Python / LangChain / Gemini', gradient: 'from-[#0a1628] to-[#0d1117]', github: 'https://github.com/mertgaygusuz/nl2sql-agent' },
+  {
+    tags: ['UIKit', 'TMDB', 'MVVM'],
+    color: 'primary',
+    gradient: 'from-[#1a1a2e] to-[#0d0d1a]',
+    icon: 'movie',
+    github: 'https://github.com/mertgaygusuz/MoviesChallenge',
+  },
+  {
+    tags: ['SwiftUI', 'Alamofire', 'MVC'],
+    color: 'secondary',
+    gradient: 'from-[#0d1117] to-[#0a1628]',
+    icon: 'chat_bubble',
+    github: 'https://github.com/mertgaygusuz/ChatGPTApp',
+  },
+  {
+    tags: ['.NET', 'MongoDB', 'REST'],
+    color: 'primary',
+    gradient: 'from-[#0f1923] to-[#0d1117]',
+    icon: 'api',
+    github: 'https://github.com/mertgaygusuz/DotnetAndMongoDbCase',
+  },
+  {
+    tags: ['Python', 'LangChain', 'Gemini'],
+    color: 'secondary',
+    gradient: 'from-[#0a1628] to-[#0d0d1a]',
+    icon: 'smart_toy',
+    github: 'https://github.com/mertgaygusuz/nl2sql-agent',
+  },
 ]
 
 export function Projects() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-32 px-8 md:px-24 bg-surface-container-low" id="work">
-      <div className="max-w-screen-2xl mx-auto">
+    <section className="bg-surface-container py-32 px-6" id="work">
+      <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           className="mb-20"
         >
-          <p className="font-label text-[11px] uppercase tracking-[0.3em] text-on-surface-variant mb-4">
-            05 / SELECTED WORKS
-          </p>
-          <h2 className="font-headline text-4xl md:text-6xl font-bold text-on-surface">
+          <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
+            Portfolio Highlights
+          </span>
+          <h2 className="text-6xl font-black tracking-tighter">
             {t.projects.title === 'Personal Projects' ? 'Digital Builds' : 'Projeler'}
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {t.projects.items.map((project, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className={`group relative aspect-[4/5] overflow-hidden bg-gradient-to-b ${PROJECT_META[i].gradient} rounded-xl cursor-pointer`}
-            >
-              {/* Overlay gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {t.projects.items.map((project, i) => {
+            const meta = PROJECT_META[i]
+            const colorClass = meta.color === 'primary' ? 'hover:border-primary' : 'hover:border-secondary'
+            const tagBg = meta.color === 'primary' ? 'bg-primary/20 text-primary' : 'bg-secondary/20 text-secondary'
+            const linkColor = meta.color === 'primary' ? 'text-primary' : 'text-secondary'
 
-              {/* Decorative grid pattern */}
-              <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(rgba(198,198,206,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(198,198,206,0.3) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+            return (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+                className={`group bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/10 transition-all duration-300 ${colorClass}`}
+              >
+                {/* Visual header */}
+                <div className={`aspect-video bg-gradient-to-br ${meta.gradient} overflow-hidden relative flex items-center justify-center`}>
+                  <span className="material-symbols-outlined text-8xl opacity-10 text-white">
+                    {meta.icon}
+                  </span>
+                  <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.15) 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 
-              <div className="absolute bottom-0 left-0 p-8 w-full">
-                <div className="flex justify-between items-end">
-                  <div className="max-w-[80%]">
-                    <p className="text-tertiary font-label text-[10px] uppercase tracking-[0.2em] mb-2">
-                      {PROJECT_META[i].tags}
-                    </p>
-                    <h3 className="text-2xl font-headline font-bold text-white leading-tight">
-                      {project.title}
-                    </h3>
-                    <p className="text-xs text-white/60 mt-2 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {project.bullets[0]}
-                    </p>
+                  {/* Tag badges */}
+                  <div className="absolute top-6 left-6 flex flex-wrap gap-2">
+                    {meta.tags.map(tag => (
+                      <span key={tag} className={`backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold font-label uppercase ${tagBg}`}>
+                        {tag}
+                      </span>
+                    ))}
                   </div>
+                </div>
+
+                {/* Content */}
+                <div className="p-10">
+                  <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
+                  <p className="text-on-surface-variant mb-8 text-lg leading-relaxed">
+                    {project.bullets[0]}
+                  </p>
                   <a
-                    href={PROJECT_META[i].github}
+                    href={meta.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center hover:bg-white/20 transition-colors shrink-0 ml-4"
-                    onClick={(e) => e.stopPropagation()}
+                    className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all ${linkColor}`}
                   >
-                    <span className="material-symbols-outlined text-on-surface text-xl">open_in_new</span>
+                    {t.projects.title === 'Personal Projects' ? 'Explore Project' : 'Projeyi İncele'}
+                    <span className="material-symbols-outlined text-base">open_in_new</span>
                   </a>
                 </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            )
+          })}
         </div>
       </div>
     </section>

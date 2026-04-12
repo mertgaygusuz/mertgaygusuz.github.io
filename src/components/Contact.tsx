@@ -4,55 +4,62 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 export function Contact() {
-  const { lang } = useLanguage()
+  const { lang, t } = useLanguage()
 
   return (
-    <section className="py-32 px-8 text-center border-t border-outline-variant/15" id="contact">
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.8 }}
-      >
-        <h2 className="font-headline text-4xl md:text-7xl font-bold mb-12 tracking-tight text-on-surface">
-          {lang === 'en' ? (
-            <>Let&apos;s build something <br /><span className="text-tertiary italic">extraordinary</span> together.</>
-          ) : (
-            <>Birlikte <span className="text-tertiary italic">olağanüstü</span> <br />şeyler inşa edelim.</>
-          )}
-        </h2>
+    <section className="py-24 px-6 border-t border-outline-variant/10" id="contact">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
 
-        <div className="flex flex-col items-center gap-6">
-          <a
-            href="mailto:mertgaygusuz@hotmail.com"
-            className="inline-flex items-center gap-4 text-primary hover:text-tertiary transition-colors duration-300"
-          >
-            <span className="font-label text-lg uppercase tracking-widest">mertgaygusuz@hotmail.com</span>
-            <span className="material-symbols-outlined text-3xl">arrow_outward</span>
-          </a>
-
-          <div className="flex gap-8 mt-4">
-            <a
-              href="https://github.com/mertgaygusuz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label text-sm"
-            >
-              <span className="material-symbols-outlined text-xl">code</span>
-              GitHub
-            </a>
-            <a
-              href="https://linkedin.com/in/mertgaygusuz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-on-surface-variant hover:text-primary transition-colors flex items-center gap-2 font-label text-sm"
-            >
-              <span className="material-symbols-outlined text-xl">person</span>
-              LinkedIn
-            </a>
+        {/* Education */}
+        <div className="max-w-md">
+          <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
+            {t.education.title === 'Education' ? 'Academic Background' : 'Akademik Geçmiş'}
+          </span>
+          <h2 className="text-4xl font-black tracking-tight mb-8">
+            {t.education.title}
+          </h2>
+          <div className="space-y-8">
+            {t.education.items.map((edu, i) => (
+              <div key={i}>
+                {i > 0 && <div className="w-12 h-px bg-outline-variant/30 mb-8" />}
+                <h4 className="font-bold text-xl">{edu.degree}</h4>
+                <p className="text-on-surface-variant font-label">{edu.school}</p>
+                <p className="text-sm text-on-surface-variant/60 font-label mt-1">{edu.period}</p>
+              </div>
+            ))}
           </div>
         </div>
-      </motion.div>
+
+        {/* Contact card */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex-1 max-w-xl"
+        >
+          <div className="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20">
+            <span className="material-symbols-outlined text-primary text-5xl mb-6 block">auto_awesome</span>
+            <h3 className="text-3xl font-black mb-6">
+              {lang === 'en'
+                ? "Let's build something extraordinary together"
+                : 'Birlikte olağanüstü şeyler inşa edelim'}
+            </h3>
+            <p className="text-on-surface-variant text-lg mb-8 leading-relaxed">
+              {lang === 'en'
+                ? "Currently open to new opportunities and interesting mobile projects. Whether you have a specific vision or just want to chat about React Native, I'm all ears."
+                : 'Yeni fırsatlara ve ilginç mobil projelere açığım. Belirli bir vizyonunuz varsa ya da sadece React Native hakkında konuşmak istiyorsanız, buradayım.'}
+            </p>
+            <a
+              href="mailto:mertgaygusuz@hotmail.com"
+              className="hero-gradient px-8 py-4 rounded-xl text-on-primary-fixed font-black inline-flex items-center gap-3 hover:shadow-lg hover:shadow-primary/20 transition-all"
+            >
+              {lang === 'en' ? 'Send a Message' : 'Mesaj Gönder'}
+              <span className="material-symbols-outlined">mail</span>
+            </a>
+          </div>
+        </motion.div>
+
+      </div>
     </section>
   )
 }
