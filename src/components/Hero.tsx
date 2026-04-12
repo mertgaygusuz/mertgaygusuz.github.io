@@ -18,6 +18,10 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
+              <p className="font-label text-secondary uppercase tracking-[0.25em] text-sm mb-6">
+                Mobile Developer | React Native &amp; iOS (Swift)
+              </p>
+
               <h1 className="font-headline font-black text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
                 <span className="block">MERT</span>
                 <span className="text-primary italic">GAYGUSUZ</span>
@@ -25,9 +29,7 @@ export function Hero() {
 
               <div className="max-w-2xl">
                 <p className="text-xl md:text-2xl text-on-surface-variant leading-relaxed mb-10">
-                  {t.hero.bio.split('React Native')[0]}
-                  <span className="text-secondary font-bold">React Native</span>
-                  {t.hero.bio.split('React Native')[1]?.split('.')[0]}.
+                  {t.hero.role}
                 </p>
 
                 <div className="flex flex-wrap gap-4">
