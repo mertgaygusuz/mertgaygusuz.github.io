@@ -91,10 +91,10 @@ export const translations = {
       title: 'Personal Projects',
       items: [
         {
-          title: 'Swift & UIKit Movie App',
+          title: 'CineFlow',
           bullets: [
-            'Developed a native iOS application utilizing MVVM architecture and TheMovieDB API integration to list popular and upcoming movies.',
-            'Optimized UX by implementing pagination and pull-to-refresh features within the UIKit and CocoaPods ecosystem.',
+            'Built a native iOS movie discovery app with MVVM architecture, featuring a now-playing slider, upcoming films list, search, and a favorites system powered by the TMDb API.',
+            'Implemented pagination, pull-to-refresh, and IMDb-linked detail views using Alamofire, Kingfisher, and SnapKit within the CocoaPods ecosystem.',
           ],
         },
         {
@@ -221,10 +221,10 @@ export const translations = {
       title: 'Kişisel Projeler',
       items: [
         {
-          title: 'Swift & UIKit Film Uygulaması',
+          title: 'CineFlow',
           bullets: [
-            'TheMovieDB API entegrasyonu ile popüler ve vizyona girecek filmleri listeleyen, MVVM mimarisine sahip native iOS uygulaması geliştirmek.',
-            'UIKit ve CocoaPods ekosistemini kullanarak; pagination (otomatik kaydırma) ve pull-to-refresh (sayfa yenileme) özellikleri ile kullanıcı deneyimini (UX) optimize etmek.',
+            'MVVM mimarisine sahip, TMDb API destekli native iOS film keşif uygulaması; vizyondaki filmler için slider, yaklaşan filmler listesi, arama ve favoriler sistemi içeriyor.',
+            'Alamofire, Kingfisher ve SnapKit kullanarak pagination, pull-to-refresh ve IMDb bağlantılı film detay sayfaları geliştirmek.',
           ],
         },
         {

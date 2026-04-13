@@ -5,11 +5,11 @@ import { useLanguage } from '@/context/LanguageContext'
 
 const PROJECT_META = [
   {
-    tags: ['UIKit', 'TMDB', 'MVVM'],
+    tags: ['Swift', 'MVVM', 'TMDb'],
     color: 'primary',
     gradient: 'from-[#1a1a2e] to-[#0d0d1a]',
     icon: 'movie',
-    github: 'https://github.com/mertgaygusuz/MoviesChallenge',
+    github: 'https://github.com/mertgaygusuz/CineFlow',
   },
   {
     tags: ['SwiftUI', 'Alamofire', 'MVC'],
