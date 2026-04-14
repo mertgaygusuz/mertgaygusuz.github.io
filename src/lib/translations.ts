@@ -98,10 +98,10 @@ export const translations = {
           ],
         },
         {
-          title: 'SwiftUI & ChatGPT App',
+          title: 'NewsFlow',
           bullets: [
-            'Architected an interactive iOS application with NLP capabilities via ChatGPT API integration, delivering real-time responses.',
-            'Built a high-performance infrastructure using modern SwiftUI components, MVC architecture, and Alamofire for network communication.',
+            'Built a full-stack news aggregation platform using .NET 10 Clean Architecture (CQRS/MediatR) on the backend and Next.js 15 with TypeScript on the frontend, featuring real-time headlines from NewsAPI stored in PostgreSQL.',
+            'Implemented Redis caching, a background sync service with hourly updates and URL-based deduplication, full-text search, bookmark functionality, and pagination — all containerized with Docker Compose.',
           ],
         },
         {
@@ -228,10 +228,10 @@ export const translations = {
           ],
         },
         {
-          title: 'SwiftUI & ChatGPT Uygulaması',
+          title: 'NewsFlow',
           bullets: [
-            'ChatGPT API entegrasyonu ile doğal dil işleme yeteneğine sahip, kullanıcı sorgularını anlık olarak yanıtlayan etkileşimli bir iOS uygulaması kurgulamak.',
-            'Modern SwiftUI arayüz bileşenleri, MVC mimarisi ve ağ iletişimi için Alamofire kütüphanesini kullanarak yüksek performanslı bir uygulama altyapısı oluşturmak.',
+            '.NET 10 Clean Architecture (CQRS/MediatR) backend ve Next.js 15 TypeScript frontend kullanarak, NewsAPI ile anlık haberleri PostgreSQL\'de saklayan tam kapsamlı bir haber toplama platformu geliştirmek.',
+            'Redis önbellekleme, saatlik otomatik senkronizasyon ve URL tabanlı tekilleştirme mekanizması, tam metin arama, yer imi özelliği ve sayfalama ile Docker Compose üzerinde kapsayıcılaştırılmış mimari oluşturmak.',
           ],
         },
         {

@@ -12,11 +12,11 @@ const PROJECT_META = [
     github: 'https://github.com/mertgaygusuz/CineFlow',
   },
   {
-    tags: ['SwiftUI', 'Alamofire', 'MVC'],
+    tags: ['.NET 10', 'Next.js 15', 'PostgreSQL'],
     color: 'secondary',
     gradient: 'from-[#0d1117] to-[#0a1628]',
-    icon: 'chat_bubble',
-    github: 'https://github.com/mertgaygusuz/ChatGPTApp',
+    icon: 'newspaper',
+    github: 'https://github.com/mertgaygusuz/NewsFlow',
   },
   {
     tags: ['.NET', 'MongoDB', 'REST'],
