@@ -19,7 +19,7 @@ export function Hero() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-label text-secondary uppercase tracking-[0.25em] text-sm mb-6">
-                Mobile Developer | React Native &amp; iOS (Swift)
+                Full-Stack Developer (React Native &amp; iOS &amp; .NET)
               </p>
 
               <h1 className="font-headline font-black text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
