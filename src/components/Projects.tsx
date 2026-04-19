@@ -19,18 +19,18 @@ const PROJECT_META = [
     github: 'https://github.com/mertgaygusuz/NewsFlow',
   },
   {
-    tags: ['.NET', 'MongoDB', 'REST'],
+    tags: ['Python', 'LangChain', 'Gemini'],
     color: 'primary',
     gradient: 'from-[#0f1923] to-[#0d1117]',
     icon: 'api',
-    github: 'https://github.com/mertgaygusuz/DotnetAndMongoDbCase',
+    github: 'https://github.com/mertgaygusuz/nl2sql-agent',
   },
   {
-    tags: ['Python', 'LangChain', 'Gemini'],
+    tags: ['Swift', 'OpenAI'],
     color: 'secondary',
     gradient: 'from-[#0a1628] to-[#0d0d1a]',
     icon: 'smart_toy',
-    github: 'https://github.com/mertgaygusuz/nl2sql-agent',
+    github: 'https://github.com/mertgaygusuz/ChatGPTApp',
   },
 ]
 
