@@ -9,7 +9,7 @@ export const translations = {
     hero: {
       title: 'Mert Gaygusuz',
       role: 'Full-Stack Developer with end-to-end experience — from scalable .NET back-end systems to high-performance React Native and native iOS interfaces.',
-      bio: 'Full-Stack Developer with 2+ years of .NET back-end experience, now specializing in mobile development with React Native and native iOS (Swift/SwiftUI). Experienced in end-to-end product delivery — from architecting scalable REST APIs and back-end systems to shipping high-performance cross-platform mobile interfaces. Currently driving the mobile transformation of an AI-powered workforce performance platform at F4e.',
+      bio: 'Full-Stack Developer with 2+ years of .NET back-end experience, now specializing in mobile development with React Native and native iOS (Swift/SwiftUI). Experienced in end-to-end product delivery — from architecting scalable REST APIs and back-end systems to shipping high-performance cross-platform mobile interfaces. Proven ability to integrate AI capabilities into production applications, including building an NL2SQL Agent from scratch.',
       location: 'Istanbul, Turkey',
       email: 'mertgaygusuz@hotmail.com',
       phone: '+90 537 451 2329',
@@ -19,10 +19,12 @@ export const translations = {
       reactNativeDesc: 'Cross-platform development with native bridge optimization.',
       apiDesc: 'High performance endpoint design.',
       groups: [
-        { label: 'Mobile', items: ['React Native', 'Swift', 'SwiftUI', 'UIKit', 'iOS', 'Android', 'CocoaPods'] },
-        { label: 'Languages', items: ['JavaScript', 'TypeScript', 'C#'] },
+        { label: 'Mobile', items: ['React Native', 'Swift', 'SwiftUI', 'SwiftData', 'UIKit', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
+        { label: 'Languages', items: ['JavaScript', 'TypeScript', 'C#', 'Python'] },
         { label: 'Backend', items: ['.NET', 'RESTful APIs', 'MongoDB', 'PostgreSQL', 'SQL Server', 'Redis'] },
-        { label: 'Frontend', items: ['Angular', 'Next.js'] },
+        { label: 'Frontend', items: ['Angular', 'Next.js', 'TypeScript'] },
+        { label: 'Architecture', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'ABP Framework'] },
+        { label: 'AI & Tools', items: ['LangChain', 'Google Gemini API', 'NL2SQL', 'Git', 'GitHub'] },
       ],
     },
     experience: {
@@ -31,12 +33,12 @@ export const translations = {
         {
           role: 'Full-Stack Developer (React Native & .NET)',
           company: 'F4e',
-          period: '01/2026 – Present',
+          period: '01/2026 – 05/2026',
           location: 'Istanbul',
           bullets: [
             'Spearheaded the web-to-mobile transformation of the AI-powered F4e workforce performance management platform, building high-performance cross-platform (iOS/Android) interfaces using React Native.',
             'Architected mobile integration of backend services, managing data synchronization and complex data flows via REST APIs.',
-            'Developed new features and bug fixes on the .NET/C# backend; occasionally contribute to front-end tasks as part of a full-stack workflow.',
+            'Developed new features and bug fixes on the .NET/C# backend; contributed to front-end tasks as part of a full-stack workflow.',
             'Built an NL2SQL Agent from scratch — translating natural language queries into SQL — and integrated it directly into the core application.',
           ],
         },
@@ -92,9 +94,15 @@ export const translations = {
       title: 'Personal Projects',
       items: [
         {
-          title: 'CineFlow',
+          title: 'HireFlow',
           bullets: [
-            'Built a native iOS movie discovery app with MVVM architecture, featuring a now-playing slider, upcoming films list, search, and a favorites system powered by the TMDb API.',
+            'Built a native iOS job application tracker with SwiftUI and MVVM architecture, using SwiftData for local persistence and Firebase for cloud sync. Implemented status tracking (Applied, CV Viewed, Interview, Offer) to visualize the full job search pipeline. Published on the App Store.',
+          ],
+        },
+        {
+          title: 'FocusReceipt',
+          bullets: [
+            'Built a local-first iOS productivity app that converts daily activities, focus sessions, energy levels, and notes into a shareable daily receipt summary. Full CRUD activity tracking with weekly insights and visual analytics via the Charts framework. Published on the App Store.',
           ],
         },
         {
@@ -106,16 +114,7 @@ export const translations = {
         {
           title: 'AI-Powered SQL Agent',
           bullets: [
-            'Built an AI assistant that translates natural language queries into MS SQL Server statements using a dual-chain LangChain architecture with Google Gemini 2.5 Flash — first generating the correct SQL, then producing a human-readable response.',
-            'Implemented an in-memory schema caching mechanism (Turbo Mode) that reduced average query response time by 80%.',
-            'Enforced read-only (SELECT-only) database access for secure, production-safe operation.',
-          ],
-        },
-        {
-          title: 'SwiftUI & ChatGPT App',
-          bullets: [
-            'Built an interactive iOS application with NLP capabilities via ChatGPT API integration, delivering real-time responses to user queries.',
-            'Architected using modern SwiftUI components, MVC pattern, and the Alamofire library for network communication.',
+            'Built an AI assistant that translates natural language queries into MS SQL Server statements using a dual-chain LangChain architecture with Google Gemini 2.5 Flash — first generating the correct SQL, then producing a human-readable response. In-memory schema caching (Turbo Mode) cut response time by 80%, with SELECT-only access enforced for production safety.',
           ],
         },
       ],
@@ -139,7 +138,7 @@ export const translations = {
     hero: {
       title: 'Mert Gaygusuz',
       role: 'Ölçeklenebilir .NET back-end sistemlerinden yüksek performanslı React Native ve native iOS arayüzlerine kadar uçtan uca deneyime sahip Full-Stack Geliştirici.',
-      bio: '2+ yıllık .NET back-end deneyimine sahip, React Native ve native iOS (Swift/SwiftUI) ile mobil geliştirme alanında uzmanlaşmakta olan Full-Stack Geliştirici. Ölçeklenebilir REST API\'ler ve back-end sistemler tasarlamaktan yüksek performanslı cross-platform mobil arayüzler geliştirmeye kadar uçtan uca ürün sahipleniminde deneyimlidir. Halihazırda yapay zeka destekli çalışan performans yönetimi platformu F4e\'nin mobil dönüşümünü yönetmektedir.',
+      bio: '2+ yıllık .NET back-end deneyimine sahip, React Native ve native iOS (Swift/SwiftUI) ile mobil geliştirme alanında uzmanlaşmakta olan Full-Stack Geliştirici. Ölçeklenebilir REST API\'ler ve back-end sistemler tasarlamaktan yüksek performanslı cross-platform mobil arayüzler geliştirmeye kadar uçtan uca ürün sahipleniminde deneyimlidir. Yapısal NL2SQL Agent geliştirme dahil, yapay zeka yeteneklerini üretim uygulamalarına entegre etme konusunda kanıtlanmış yetkinliğe sahiptir.',
       location: 'İstanbul, Türkiye',
       email: 'mertgaygusuz@hotmail.com',
       phone: '+90 537 451 2329',
@@ -149,10 +148,12 @@ export const translations = {
       reactNativeDesc: 'Native bridge optimizasyonuyla cross-platform geliştirme.',
       apiDesc: 'Yüksek performanslı endpoint tasarımı.',
       groups: [
-        { label: 'Mobil', items: ['React Native', 'Swift', 'SwiftUI', 'UIKit', 'iOS', 'Android', 'CocoaPods'] },
-        { label: 'Diller', items: ['JavaScript', 'TypeScript', 'C#'] },
+        { label: 'Mobil', items: ['React Native', 'Swift', 'SwiftUI', 'SwiftData', 'UIKit', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
+        { label: 'Diller', items: ['JavaScript', 'TypeScript', 'C#', 'Python'] },
         { label: 'Arka Uç', items: ['.NET', 'RESTful APIs', 'MongoDB', 'PostgreSQL', 'SQL Server', 'Redis'] },
-        { label: 'Ön Yüz', items: ['Angular', 'Next.js'] },
+        { label: 'Ön Yüz', items: ['Angular', 'Next.js', 'TypeScript'] },
+        { label: 'Mimari', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'ABP Framework'] },
+        { label: 'Yapay Zeka & Araçlar', items: ['LangChain', 'Google Gemini API', 'NL2SQL', 'Git', 'GitHub'] },
       ],
     },
     experience: {
@@ -161,11 +162,11 @@ export const translations = {
         {
           role: 'Full-Stack Geliştirici (React Native & .NET)',
           company: 'F4e',
-          period: '01/2026 – günümüz',
+          period: '01/2026 – 05/2026',
           location: 'İstanbul',
           bullets: [
             'Yapay zeka destekli çalışan performans yönetimi platformu F4e\'nin web\'den mobil\'e dönüşümüne öncülük ederek React Native kullanarak yüksek performanslı, platformlar arası (iOS/Android) arayüzler geliştirdi.',
-            'Back-end servislerinin mobil entegrasyonunu mimarlandı; REST API\'ler aracılığıyla veri senkronizasyonunu ve karmaşık veri akışlarını yönetti.',
+            'Back-end servislerinin mobil entegrasyonunu mimarladı; REST API\'ler aracılığıyla veri senkronizasyonunu ve karmaşık veri akışlarını yönetti.',
             '.NET/C# back-end\'inde yeni özellikler geliştirdi ve hata düzeltmeleri yaptı; full-stack iş akışının bir parçası olarak zaman zaman front-end görevleri de üstlendi.',
             'Doğal dil sorgularını SQL\'e dönüştüren NL2SQL Agent\'ı sıfırdan geliştirerek core uygulamaya entegre etti.',
           ],
@@ -222,9 +223,15 @@ export const translations = {
       title: 'Kişisel Projeler',
       items: [
         {
-          title: 'CineFlow',
+          title: 'HireFlow',
           bullets: [
-            'MVVM mimarisini kullanan native bir iOS film keşif uygulaması geliştirdi; TMDb API ile güncel vizyondaki filmler, yaklaşan filmler, arama ve favoriler sistemi özellikleri sunmaktadır.',
+            'SwiftUI ve MVVM mimarisini kullanan native bir iOS iş başvuru takip uygulaması geliştirdi; yerel depolama için SwiftData, bulut senkronizasyonu için Firebase kullanıldı. Başvuru durumu takibi (Başvuruldu, CV Görüldü, Mülakat, Teklif) ile iş arama süreci görsel olarak yönetilebilmektedir. App Store\'da yayınlandı.',
+          ],
+        },
+        {
+          title: 'FocusReceipt',
+          bullets: [
+            'Günlük aktiviteleri, odak sürelerini, enerji seviyelerini ve notları paylaşılabilir bir günlük makbuz özeti olarak sunan local-first bir iOS üretkenlik uygulaması geliştirdi. Tam CRUD aktivite takibi; Charts framework\'ü ile haftalık içgörüler ve görsel analitikler eklendi. App Store\'da yayınlandı.',
           ],
         },
         {
@@ -236,16 +243,7 @@ export const translations = {
         {
           title: 'Yapay Zeka Destekli SQL Asistanı',
           bullets: [
-            'Doğal dil sorgularını MS SQL Server komutlarına dönüştüren bir yapay zeka asistanı geliştirdi; çift zincirli LangChain mimarisi ve Google Gemini 2.5 Flash ile önce doğru SQL üretilmekte, ardından sonuç doğal dilde kullanıcıya sunulmaktadır.',
-            'Veritabanı şema bilgisini bellekte saklayan Turbo Mod mekanizması ile ortalama sorgu yanıt süresini %80 azalttı.',
-            'Güvenlik için erişim yalnızca SELECT sorgusuyla sınırlandırıldı.',
-          ],
-        },
-        {
-          title: 'SwiftUI & ChatGPT Uygulaması',
-          bullets: [
-            'ChatGPT API entegrasyonuyla NLP yeteneğine sahip, gerçek zamanlı yanıt veren etkileşimli bir iOS uygulaması tasarladı.',
-            'Modern SwiftUI bileşenleri, MVC mimarisi ve Alamofire kütüphanesi kullanıldı.',
+            'Doğal dil sorgularını MS SQL Server komutlarına dönüştüren bir yapay zeka asistanı geliştirdi; çift zincirli LangChain mimarisi ve Google Gemini 2.5 Flash ile önce doğru SQL üretilmekte, ardından sonuç doğal dilde kullanıcıya sunulmaktadır. Turbo Mod ile yanıt süresi %80 azaltıldı, üretim güvenliği için yalnızca SELECT erişimi zorlandı.',
           ],
         },
       ],

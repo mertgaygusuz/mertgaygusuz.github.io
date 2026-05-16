@@ -3,34 +3,40 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
-const PROJECT_META = [
+type ProjectMeta = {
+  tags: string[]
+  color: 'primary' | 'secondary'
+  gradient: string
+  icon: string
+  github?: string
+}
+
+const PROJECT_META: ProjectMeta[] = [
   {
-    tags: ['Swift', 'MVVM', 'TMDb'],
+    tags: ['SwiftUI', 'SwiftData', 'Firebase'],
     color: 'primary',
     gradient: 'from-[#1a1a2e] to-[#0d0d1a]',
-    icon: 'movie',
-    github: 'https://github.com/mertgaygusuz/CineFlow',
+    icon: 'work',
+  },
+  {
+    tags: ['SwiftUI', 'SwiftData', 'Charts'],
+    color: 'secondary',
+    gradient: 'from-[#0d1117] to-[#0a1628]',
+    icon: 'receipt_long',
   },
   {
     tags: ['.NET 10', 'Next.js 15', 'PostgreSQL'],
-    color: 'secondary',
-    gradient: 'from-[#0d1117] to-[#0a1628]',
+    color: 'primary',
+    gradient: 'from-[#0f1923] to-[#0d1117]',
     icon: 'newspaper',
     github: 'https://github.com/mertgaygusuz/NewsFlow',
   },
   {
     tags: ['Python', 'LangChain', 'Gemini'],
-    color: 'primary',
-    gradient: 'from-[#0f1923] to-[#0d1117]',
-    icon: 'api',
-    github: 'https://github.com/mertgaygusuz/nl2sql-agent',
-  },
-  {
-    tags: ['Swift', 'OpenAI'],
     color: 'secondary',
     gradient: 'from-[#0a1628] to-[#0d0d1a]',
-    icon: 'smart_toy',
-    github: 'https://github.com/mertgaygusuz/ChatGPTApp',
+    icon: 'api',
+    github: 'https://github.com/mertgaygusuz/nl2sql-agent',
   },
 ]
 
@@ -94,15 +100,17 @@ export function Projects() {
                   <p className="text-on-surface-variant mb-8 text-lg leading-relaxed">
                     {project.bullets[0]}
                   </p>
-                  <a
-                    href={meta.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all ${linkColor}`}
-                  >
-                    {isEn ? 'Explore Project' : 'Projeyi İncele'}
-                    <span className="material-symbols-outlined text-base">open_in_new</span>
-                  </a>
+                  {meta.github && (
+                    <a
+                      href={meta.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all ${linkColor}`}
+                    >
+                      {isEn ? 'Explore Project' : 'Projeyi İncele'}
+                      <span className="material-symbols-outlined text-base">open_in_new</span>
+                    </a>
+                  )}
                 </div>
               </motion.div>
             )

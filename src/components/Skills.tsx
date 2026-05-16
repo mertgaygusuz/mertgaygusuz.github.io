@@ -9,7 +9,7 @@ const SKILLS = [
   { icon: 'code',            label: 'TypeScript',   sub: 'Architecture',   color: 'primary' },
   { icon: 'terminal',        label: '.NET Core',    sub: 'Backend',        color: 'secondary' },
   { icon: 'database',        label: 'MongoDB',      sub: 'Database',       color: 'primary' },
-  { icon: 'palette',         label: 'UI/UX Design', sub: 'Interfaces',     color: 'secondary' },
+  { icon: 'smart_toy',       label: 'LangChain',    sub: 'AI Integration', color: 'secondary' },
 ]
 
 export function Skills() {
