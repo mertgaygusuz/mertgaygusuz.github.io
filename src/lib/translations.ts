@@ -5,7 +5,7 @@ export const translations = {
       experience: 'Experience',
       projects: 'Projects',
       contact: 'Contact',
-      resume: 'Résumé',
+      resume: 'Resume',
       downloadCv: 'Download CV',
     },
     hero: {

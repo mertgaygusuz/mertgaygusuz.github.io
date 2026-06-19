@@ -2,9 +2,9 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --font-headline: var(--font-inter), sans-serif;
-  --font-body: var(--font-inter), sans-serif;
-  --font-label: var(--font-space-grotesk), sans-serif;
+  --font-headline: var(--font-be-vietnam), sans-serif;
+  --font-body: var(--font-be-vietnam), sans-serif;
+  --font-label: var(--font-be-vietnam), sans-serif;
 
   --color-canvas: var(--canvas);
   --color-surface-container: var(--surface-container);
