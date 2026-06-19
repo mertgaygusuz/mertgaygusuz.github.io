@@ -5,6 +5,8 @@ export const translations = {
       experience: 'Experience',
       projects: 'Projects',
       contact: 'Contact',
+      resume: 'Résumé',
+      downloadCv: 'Download CV',
     },
     hero: {
       title: 'Mert Gaygusuz',
@@ -154,6 +156,8 @@ export const translations = {
       experience: 'Deneyim',
       projects: 'Projeler',
       contact: 'İletişim',
+      resume: 'CV',
+      downloadCv: 'CV İndir',
     },
     hero: {
       title: 'Mert Gaygusuz',

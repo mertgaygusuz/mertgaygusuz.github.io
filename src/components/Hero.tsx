@@ -4,7 +4,8 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
 
 export function Hero() {
-  const { t } = useLanguage()
+  const { t, lang } = useLanguage()
+  const cvHref = `/cv/MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`
 
   return (
     <section className="relative pt-40 pb-20 md:pt-60 md:pb-40 px-6" id="hero">
@@ -45,6 +46,14 @@ export function Hero() {
                     className="bg-surface-container-high px-8 py-4 rounded-xl text-on-surface font-black text-lg border border-outline-variant/20 hover:bg-surface-bright transition-colors"
                   >
                     {t.nav.contact}
+                  </a>
+                  <a
+                    href={cvHref}
+                    download={`MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`}
+                    className="px-8 py-4 rounded-xl text-on-surface font-black text-lg border border-primary/40 hover:bg-primary/10 transition-colors flex items-center gap-2 group"
+                  >
+                    {t.nav.downloadCv}
+                    <span className="material-symbols-outlined group-hover:translate-y-0.5 transition-transform">download</span>
                   </a>
                 </div>
               </div>

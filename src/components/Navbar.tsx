@@ -9,6 +9,8 @@ export function Navbar() {
   const { lang, t, setLang } = useLanguage()
   const [mounted, setMounted] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const cvHref = `/cv/MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`
+  const cvFile = `MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`
 
   useEffect(() => setMounted(true), [])
 
@@ -28,6 +30,10 @@ export function Navbar() {
           <a href="#work" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.projects}</a>
           <a href="#experience" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.experience}</a>
           <a href="#skills" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.skills}</a>
+          <a href={cvHref} download={cvFile} className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest flex items-center gap-1.5">
+            {t.nav.resume}
+            <span className="material-symbols-outlined text-base leading-none">download</span>
+          </a>
 
           {/* Lang toggle */}
           <div className="flex items-center gap-1 font-label text-xs">
@@ -93,6 +99,16 @@ export function Navbar() {
               {label}
             </a>
           ))}
+
+          <a
+            href={cvHref}
+            download={cvFile}
+            onClick={() => setMobileOpen(false)}
+            className="text-primary font-label text-sm uppercase tracking-widest py-3 border-b border-outline-variant/20 flex items-center gap-2"
+          >
+            {t.nav.downloadCv}
+            <span className="material-symbols-outlined text-base leading-none">download</span>
+          </a>
 
           <div className="flex items-center justify-between pt-4 mt-1">
             <div className="flex items-center gap-1 font-label text-xs">
