@@ -7,7 +7,7 @@ export function Footer() {
   const isEn = lang === 'en'
 
   return (
-    <footer className="py-20 px-6 border-t border-outline-variant/15">
+    <footer className="bg-surface-container-lowest py-20 px-6 border-t border-outline-variant/10">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 
@@ -15,7 +15,7 @@ export function Footer() {
           <div className="md:col-span-4">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-8 h-8 hero-gradient flex items-center justify-center rounded-lg">
-                <span className="font-black text-[#241008] text-sm">M</span>
+                <span className="font-black text-on-primary-fixed text-sm">M</span>
               </div>
               <span className="font-label font-bold tracking-tighter text-lg uppercase">Mert Gaygusuz</span>
             </div>

@@ -16,7 +16,7 @@ type ProjectMeta = {
 
 const PROJECT_META: ProjectMeta[] = [
   {
-    tags: ['SwiftUI', 'SignalR', 'ASP.NET Core'],
+    tags: ['SwiftUI', 'SignalR', 'StoreKit 2'],
     color: 'primary',
     gradient: 'from-[#1a1410] to-[#0d0a07]',
     icon: 'graphic_eq',
@@ -76,7 +76,7 @@ export function Projects() {
   const isEn = lang === 'en'
 
   return (
-    <section className="py-32 px-6" id="work">
+    <section className="bg-surface-container py-32 px-6" id="work">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -84,12 +84,9 @@ export function Projects() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <div className="pill mb-5">
-            <span className="glow-dot" />
-            <span className="font-label text-primary uppercase tracking-[0.2em] text-[0.7rem] font-bold">
-              {isEn ? 'Portfolio Highlights' : 'Öne Çıkan Projeler'}
-            </span>
-          </div>
+          <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
+            {isEn ? 'Portfolio Highlights' : 'Öne Çıkan Projeler'}
+          </span>
           <h2 className="text-6xl font-black tracking-tighter">
             {isEn ? 'Digital Builds' : 'Projeler'}
           </h2>
@@ -98,6 +95,7 @@ export function Projects() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {t.projects.items.map((project, i) => {
             const meta = PROJECT_META[i]
+            const colorClass = meta.color === 'primary' ? 'hover:border-primary' : 'hover:border-secondary'
             const tagBg = meta.color === 'primary' ? 'bg-primary/20 text-primary' : 'bg-secondary/20 text-secondary'
             const linkColor = meta.color === 'primary' ? 'text-primary' : 'text-secondary'
 
@@ -108,7 +106,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-                className="group glass rounded-[2rem] overflow-hidden transition-all duration-300"
+                className={`group bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/10 transition-all duration-300 ${colorClass}`}
               >
                 {/* Visual header */}
                 <div className={`aspect-video bg-gradient-to-br ${meta.gradient} overflow-hidden relative flex items-center justify-center`}>

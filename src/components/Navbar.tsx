@@ -1,27 +1,32 @@
 'use client'
 
+import { useTheme } from 'next-themes'
 import { useLanguage } from '@/context/LanguageContext'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function Navbar() {
+  const { theme, setTheme } = useTheme()
   const { lang, t, setLang } = useLanguage()
+  const [mounted, setMounted] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const cvHref = `/cv/MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`
   const cvFile = `MertGaygusuz_Resume_${lang.toUpperCase()}.pdf`
 
+  useEffect(() => setMounted(true), [])
+
   return (
-    <header className="fixed top-0 z-50 w-full glass-nav">
+    <header className="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/90 border-b border-outline-variant/20">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         {/* Logo */}
-        <a href="#hero" className="flex items-center gap-3">
+        <div className="flex items-center gap-3">
           <div className="w-10 h-10 hero-gradient flex items-center justify-center rounded-xl">
-            <span className="font-black text-[#241008] text-xl">M</span>
+            <span className="font-black text-on-primary-fixed text-xl">M</span>
           </div>
-          <span className="font-label font-bold tracking-tighter text-xl uppercase text-heading">Gaygusuz</span>
-        </a>
+          <span className="font-label font-bold tracking-tighter text-xl uppercase text-on-surface">Gaygusuz</span>
+        </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-9">
+        <nav className="hidden md:flex items-center gap-10">
           <a href="#work" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.projects}</a>
           <a href="#experience" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.experience}</a>
           <a href="#skills" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.skills}</a>
@@ -31,20 +36,34 @@ export function Navbar() {
           </a>
 
           {/* Lang toggle */}
-          <div className="flex items-center gap-1 font-label text-xs rounded-full border border-outline-variant/40 bg-white/5 p-1">
+          <div className="flex items-center gap-1 font-label text-xs">
             <button
               onClick={() => setLang('tr')}
-              className={`px-2.5 py-1 rounded-full transition-colors ${lang === 'tr' ? 'hero-gradient text-[#241008] font-bold' : 'text-on-surface-variant hover:text-on-surface'}`}
+              className={`px-2 py-1 transition-colors ${lang === 'tr' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'}`}
             >TR</button>
+            <span className="text-outline-variant">|</span>
             <button
               onClick={() => setLang('en')}
-              className={`px-2.5 py-1 rounded-full transition-colors ${lang === 'en' ? 'hero-gradient text-[#241008] font-bold' : 'text-on-surface-variant hover:text-on-surface'}`}
+              className={`px-2 py-1 transition-colors ${lang === 'en' ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'}`}
             >EN</button>
           </div>
 
+          {/* Theme toggle */}
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="text-on-surface-variant hover:text-primary cursor-pointer transition-all duration-300"
+              aria-label="Toggle theme"
+            >
+              <span className="material-symbols-outlined text-xl leading-none">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+          )}
+
           <a
             href="#contact"
-            className="btn-glow px-6 py-2 rounded-full font-label font-bold text-sm"
+            className="hero-gradient px-6 py-2 rounded-lg font-label font-bold text-on-primary-fixed text-sm"
           >
             {t.nav.contact}
           </a>
@@ -52,11 +71,11 @@ export function Navbar() {
 
         {/* Mobile menu button */}
         <button
-          className="md:hidden text-primary"
+          className="md:hidden text-on-surface-variant"
           onClick={() => setMobileOpen(prev => !prev)}
           aria-label="Toggle menu"
         >
-          <span className="material-symbols-outlined">
+          <span className="material-symbols-outlined text-primary">
             {mobileOpen ? 'close' : 'menu'}
           </span>
         </button>
@@ -64,7 +83,7 @@ export function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileOpen && (
-        <div className="md:hidden glass-nav border-t border-outline-variant/20 px-6 py-6 flex flex-col gap-1">
+        <div className="md:hidden bg-background/97 backdrop-blur-xl border-t border-outline-variant/20 px-6 py-6 flex flex-col gap-1">
           {[
             { href: '#work', label: t.nav.projects },
             { href: '#experience', label: t.nav.experience },
@@ -91,9 +110,24 @@ export function Navbar() {
             <span className="material-symbols-outlined text-base leading-none">download</span>
           </a>
 
-          <div className="flex items-center gap-1 font-label text-xs pt-4 mt-1">
-            <button onClick={() => setLang('tr')} className={`px-3 py-1.5 rounded-full transition-colors ${lang === 'tr' ? 'hero-gradient text-[#241008] font-bold' : 'text-on-surface-variant'}`}>TR</button>
-            <button onClick={() => setLang('en')} className={`px-3 py-1.5 rounded-full transition-colors ${lang === 'en' ? 'hero-gradient text-[#241008] font-bold' : 'text-on-surface-variant'}`}>EN</button>
+          <div className="flex items-center justify-between pt-4 mt-1">
+            <div className="flex items-center gap-1 font-label text-xs">
+              <button onClick={() => setLang('tr')} className={`px-2 py-1 transition-colors ${lang === 'tr' ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>TR</button>
+              <span className="text-outline-variant">|</span>
+              <button onClick={() => setLang('en')} className={`px-2 py-1 transition-colors ${lang === 'en' ? 'text-primary font-bold' : 'text-on-surface-variant'}`}>EN</button>
+            </div>
+
+            {mounted && (
+              <button
+                onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                className="text-on-surface-variant hover:text-primary cursor-pointer transition-colors"
+                aria-label="Toggle theme"
+              >
+                <span className="material-symbols-outlined text-xl leading-none">
+                  {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+                </span>
+              </button>
+            )}
           </div>
         </div>
       )}

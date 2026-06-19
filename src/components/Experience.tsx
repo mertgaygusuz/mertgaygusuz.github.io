@@ -15,12 +15,9 @@ export function Experience() {
           {/* Sticky left column */}
           <div className="lg:col-span-4">
             <div className="sticky top-32">
-              <div className="pill mb-5">
-                <span className="glow-dot" />
-                <span className="font-label text-primary uppercase tracking-[0.2em] text-[0.7rem] font-bold">
-                  {isEn ? 'Professional History' : 'Kariyer Geçmişi'}
-                </span>
-              </div>
+              <span className="font-label text-secondary uppercase tracking-[0.3em] text-sm block mb-4">
+                {isEn ? 'Professional History' : 'Kariyer Geçmişi'}
+              </span>
               <h2 className="text-6xl font-black tracking-tighter mb-8 leading-none">
                 {isEn ? 'The Journey' : 'Kariyer'}
               </h2>
@@ -41,9 +38,9 @@ export function Experience() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="relative pl-12 border-l-2 border-outline-variant/30"
+                className="relative pl-12 border-l-2 border-outline-variant/20"
               >
-                <div className={`absolute -left-[10px] top-1 w-4 h-4 rounded-full ${i === 0 ? 'glow-dot !w-4 !h-4' : 'bg-outline ring-4 ring-canvas'}`} />
+                <div className={`absolute -left-[11px] top-0 w-5 h-5 rounded-full ring-8 ring-background ${i === 0 ? 'bg-primary' : 'bg-outline'}`} />
 
                 <div className="mb-4">
                   <span className={`font-label font-bold tracking-widest text-sm uppercase ${i === 0 ? 'text-primary' : 'text-on-surface-variant'}`}>
@@ -71,18 +68,13 @@ export function Experience() {
             viewport={{ once: true }}
             className="mt-24 border-t border-outline-variant/20 pt-16"
           >
-            <div className="pill mb-5">
-              <span className="glow-dot" />
-              <span className="font-label text-primary uppercase tracking-[0.2em] text-[0.7rem] font-bold">
-                {t.certificates.title}
-              </span>
-            </div>
+            <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
+              {t.certificates.title}
+            </span>
             {t.certificates.items.map((cert, i) => (
-              <div key={i} className="glass glass-sheen p-8 rounded-3xl max-w-2xl">
-                <div className="icon-orb w-12 h-12 rounded-xl mb-5">
-                  <span className="material-symbols-outlined text-2xl">workspace_premium</span>
-                </div>
-                <h3 className="text-xl font-bold text-heading">{cert.name}</h3>
+              <div key={i} className="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10 max-w-2xl">
+                <span className="material-symbols-outlined text-primary text-3xl mb-4 block">workspace_premium</span>
+                <h3 className="text-xl font-bold text-on-surface">{cert.name}</h3>
                 <p className="text-secondary mt-1 text-sm font-label">{cert.issuer}</p>
                 <p className="text-on-surface-variant mt-2 leading-relaxed">{cert.description}</p>
               </div>
