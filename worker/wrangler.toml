@@ -1,0 +1,14 @@
+name = "mert-assistant"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+# Allowed browser origins that may call this Worker (CORS).
+# Add your custom domain here later if you set one up.
+[vars]
+ALLOWED_ORIGINS = "https://mertgaygusuz.github.io,http://localhost:3000,http://localhost:3001"
+
+# The Gemini model to use. gemini-2.5-flash is fast and free-tier friendly.
+GEMINI_MODEL = "gemini-2.5-flash"
+
+# GEMINI_API_KEY is a SECRET — never put it here. Set it with:
+#   wrangler secret put GEMINI_API_KEY

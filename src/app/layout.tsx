@@ -53,11 +53,45 @@ export const metadata: Metadata = {
   },
 }
 
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Mert Gaygusuz',
+  url: SITE_URL,
+  image: `${SITE_URL}/og.png`,
+  jobTitle: 'Full-Stack Mobile Developer',
+  email: 'mailto:mertgaygusuz@hotmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Istanbul',
+    addressCountry: 'TR',
+  },
+  sameAs: [
+    'https://github.com/mertgaygusuz',
+    'https://linkedin.com/in/mertgaygusuz',
+  ],
+  knowsAbout: [
+    'React Native',
+    'iOS',
+    'Swift',
+    'SwiftUI',
+    '.NET',
+    'C#',
+    'SignalR',
+    'PostgreSQL',
+    'LangChain',
+  ],
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </head>
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-body`}>
         <Providers>{children}</Providers>

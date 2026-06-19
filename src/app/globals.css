@@ -103,6 +103,18 @@ body {
   color: var(--on-surface);
 }
 
+/* Keyboard-visible focus ring (low specificity, won't fight utilities) */
+:where(a, button, [tabindex], summary):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Don't show the ring for mouse clicks, only keyboard */
+:where(a, button):focus:not(:focus-visible) {
+  outline: none;
+}
+
 .hero-gradient {
   background: linear-gradient(135deg, #ff7a1a 0%, #ff9d5c 100%);
 }

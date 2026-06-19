@@ -42,3 +42,8 @@ next-env.d.ts
 
 # local dev tooling
 .claude/
+
+# cloudflare worker
+worker/.dev.vars
+worker/.wrangler/
+.dev.vars
