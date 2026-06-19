@@ -18,7 +18,7 @@ export function Stats() {
         >
           {t.stats.items.map((item, i) => (
             <div key={i} className="flex items-center gap-2.5 font-label text-sm text-on-surface-variant">
-              <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
+              <span className="glow-dot shrink-0" />
               <span>{item}</span>
             </div>
           ))}

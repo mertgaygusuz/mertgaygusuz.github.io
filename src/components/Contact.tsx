@@ -12,9 +12,12 @@ export function Contact() {
 
         {/* Education */}
         <div className="max-w-md">
-          <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
-            {t.education.title === 'Education' ? 'Academic Background' : 'Akademik Geçmiş'}
-          </span>
+          <div className="pill mb-5">
+            <span className="glow-dot" />
+            <span className="font-label text-primary uppercase tracking-[0.2em] text-[0.7rem] font-bold">
+              {t.education.title === 'Education' ? 'Academic Background' : 'Akademik Geçmiş'}
+            </span>
+          </div>
           <h2 className="text-4xl font-black tracking-tight mb-8">
             {t.education.title}
           </h2>
@@ -38,9 +41,11 @@ export function Contact() {
           viewport={{ once: true }}
           className="flex-1 max-w-xl scroll-mt-28"
         >
-          <div className="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20">
-            <span className="material-symbols-outlined text-primary text-5xl mb-6 block">auto_awesome</span>
-            <h3 className="text-3xl font-black mb-6">
+          <div className="glass glass-strong glass-sheen p-12 rounded-[2.5rem]">
+            <div className="icon-orb w-14 h-14 rounded-2xl mb-6">
+              <span className="material-symbols-outlined text-3xl">auto_awesome</span>
+            </div>
+            <h3 className="text-3xl font-black mb-6 text-heading">
               {lang === 'en'
                 ? "Let's build something extraordinary together"
                 : 'Birlikte olağanüstü şeyler inşa edelim'}
@@ -52,7 +57,7 @@ export function Contact() {
             </p>
             <a
               href="mailto:mertgaygusuz@hotmail.com"
-              className="hero-gradient px-8 py-4 rounded-xl text-on-primary-fixed font-black inline-flex items-center gap-3 hover:shadow-lg hover:shadow-primary/20 transition-all"
+              className="btn-glow px-8 py-4 rounded-full font-black inline-flex items-center gap-3"
             >
               {lang === 'en' ? 'Send a Message' : 'Mesaj Gönder'}
               <span className="material-symbols-outlined">mail</span>
