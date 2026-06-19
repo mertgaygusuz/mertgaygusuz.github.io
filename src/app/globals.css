@@ -35,52 +35,53 @@
 }
 
 :root {
-  /* Light mode — complementary to dark palette */
-  --background: #f5f5ff;
-  --foreground: #1a1a2e;
-  --surface-container: #e8e8f4;
-  --surface-container-low: #eeeef8;
-  --surface-container-lowest: #f5f5ff;
-  --surface-container-high: #ddddef;
-  --surface-container-highest: #d2d2e8;
-  --surface-variant: #d2d2e8;
+  /* Light mode — warm cream "paper" palette, matching the app suite */
+  --background: #faf7f0;
+  --foreground: #2a2018;
+  --surface-container: #f1eadd;
+  --surface-container-low: #f6f0e6;
+  --surface-container-lowest: #fdfbf6;
+  --surface-container-high: #eae0d0;
+  --surface-container-highest: #e4d8c4;
+  --surface-variant: #e4d8c4;
   --surface-bright: #ffffff;
-  --on-surface-variant: #44455a;
-  --primary: #3051d4;
+  --on-surface-variant: #5c5145;
+  --primary: #c2410c;
   --on-primary: #ffffff;
-  --on-primary-fixed: #001356;
-  --primary-container: #6e88ff;
-  --secondary: #006b79;
+  --on-primary-fixed: #3a1200;
+  --primary-container: #ff9d5c;
+  --secondary: #7a5a3a;
   --on-secondary: #ffffff;
-  --tertiary: #3c3c45;
+  --tertiary: #4a4038;
   --on-tertiary: #ffffff;
-  --outline-variant: #c0c0d0;
-  --outline: #72738a;
-  --on-surface: #1a1a2e;
+  --outline-variant: #ddd0bd;
+  --outline: #8a7a66;
+  --on-surface: #2a2018;
 }
 
 .dark {
-  --background: #131313;
-  --foreground: #e2e2e2;
-  --surface-container: #1f1f1f;
-  --surface-container-low: #1b1b1b;
-  --surface-container-lowest: #0e0e0e;
-  --surface-container-high: #2a2a2a;
-  --surface-container-highest: #353535;
-  --surface-variant: #353535;
-  --surface-bright: #393939;
-  --on-surface-variant: #c4c5d7;
-  --primary: #b9c3ff;
-  --on-primary: #002388;
-  --on-primary-fixed: #001356;
-  --primary-container: #6e88ff;
-  --secondary: #69d5e8;
-  --on-secondary: #00363d;
-  --tertiary: #c6c6cf;
-  --on-tertiary: #2f3037;
-  --outline-variant: #444654;
-  --outline: #8e90a0;
-  --on-surface: #e2e2e2;
+  /* Dark mode — warm charcoal/espresso, the hero look of the icons */
+  --background: #15110d;
+  --foreground: #ece3d6;
+  --surface-container: #211a14;
+  --surface-container-low: #1b1510;
+  --surface-container-lowest: #100c08;
+  --surface-container-high: #2c241c;
+  --surface-container-highest: #382e24;
+  --surface-variant: #382e24;
+  --surface-bright: #3d3228;
+  --on-surface-variant: #d4c4b0;
+  --primary: #ff8a3d;
+  --on-primary: #4a1c00;
+  --on-primary-fixed: #2a0f00;
+  --primary-container: #ff7a1a;
+  --secondary: #e6d4ba;
+  --on-secondary: #3a2a18;
+  --tertiary: #d8c8b4;
+  --on-tertiary: #2f2419;
+  --outline-variant: #4a3d30;
+  --outline: #9a8670;
+  --on-surface: #ece3d6;
 }
 
 * {
@@ -97,19 +98,19 @@ body {
 }
 
 .hero-gradient {
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-container) 100%);
+  background: linear-gradient(135deg, #ff7a1a 0%, #ff9d5c 100%);
 }
 
 .glass-nav {
-  background: rgba(245, 245, 255, 0.92);
+  background: rgba(250, 247, 240, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(48, 81, 212, 0.1);
+  border-bottom: 1px solid rgba(194, 65, 12, 0.12);
 }
 
 .dark .glass-nav {
-  background: rgba(19, 19, 19, 0.92);
-  border-bottom: 1px solid rgba(185, 195, 255, 0.12);
+  background: rgba(21, 17, 13, 0.92);
+  border-bottom: 1px solid rgba(255, 138, 61, 0.14);
 }
 
 .glass-panel {
@@ -119,7 +120,7 @@ body {
 }
 
 .dark .glass-panel {
-  background: rgba(31, 31, 31, 0.85);
+  background: rgba(33, 26, 20, 0.85);
   border-color: rgba(255, 255, 255, 0.06);
 }
 

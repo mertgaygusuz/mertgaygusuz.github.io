@@ -19,11 +19,12 @@ export const translations = {
       reactNativeDesc: 'Cross-platform development with native bridge optimization.',
       apiDesc: 'High performance endpoint design.',
       groups: [
-        { label: 'Mobile', items: ['React Native', 'Swift', 'SwiftUI', 'SwiftData', 'UIKit', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
+        { label: 'Mobile', items: ['React Native', 'Swift', 'SwiftUI', 'Combine', 'SwiftData', 'UIKit', 'StoreKit 2', 'AVPlayer', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
         { label: 'Languages', items: ['JavaScript', 'TypeScript', 'C#', 'Python'] },
-        { label: 'Backend', items: ['.NET', 'RESTful APIs', 'MongoDB', 'PostgreSQL', 'SQL Server', 'Redis'] },
+        { label: 'Backend', items: ['.NET', 'ASP.NET Core', 'SignalR', 'Entity Framework Core', 'RESTful APIs'] },
+        { label: 'Databases', items: ['PostgreSQL', 'MongoDB', 'Cloud Firestore', 'SQL Server', 'Redis'] },
         { label: 'Frontend', items: ['Angular', 'Next.js', 'TypeScript'] },
-        { label: 'Architecture', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'ABP Framework'] },
+        { label: 'Architecture', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'Repository Pattern', 'ABP Framework'] },
         { label: 'AI & Tools', items: ['LangChain', 'Google Gemini API', 'NL2SQL', 'Git', 'GitHub'] },
       ],
     },
@@ -94,27 +95,39 @@ export const translations = {
       title: 'Personal Projects',
       items: [
         {
-          title: 'HireFlow',
+          title: 'Zynkra',
           bullets: [
-            'Built a native iOS job application tracker with SwiftUI and MVVM architecture, using SwiftData for local persistence and Firebase for cloud sync. Implemented status tracking (Applied, CV Viewed, Interview, Offer) to visualize the full job search pipeline. Published on the App Store.',
+            'A social entertainment app where users listen to music and watch videos together in live, synchronized rooms; the "Vibe Radar" surfaces people in the same mood for anonymous chats — without revealing identity. Built a native Swift/SwiftUI/Combine client on a real-time SignalR + ASP.NET Core / PostgreSQL backend, with synchronized playback via AVPlayer & the YouTube IFrame API and subscriptions through StoreKit 2. Published on the App Store.',
           ],
         },
         {
-          title: 'FocusReceipt',
+          title: 'Blip',
           bullets: [
-            'Built a local-first iOS productivity app that converts daily activities, focus sessions, energy levels, and notes into a shareable daily receipt summary. Full CRUD activity tracking with weekly insights and visual analytics via the Charts framework. Published on the App Store.',
+            'A social iOS app where users post anonymous thoughts, questions, and short updates, review incoming replies, and accept ones to start anonymous chats around trending topics. Built with MVVM and the repository pattern in Swift/SwiftUI/Combine, with Firebase Auth, Cloud Firestore, Sign in with Apple, and a custom design system. Published on the App Store.',
           ],
         },
         {
           title: 'NewsFlow',
           bullets: [
-            'Built a full-stack news aggregation platform using .NET 10 Clean Architecture (CQRS/MediatR) on the backend and Next.js 15 with TypeScript on the frontend, featuring real-time headlines stored in PostgreSQL.',
+            'A full-stack news aggregation platform using .NET 10 Clean Architecture (CQRS/MediatR) on the backend and Next.js 15 with TypeScript on the frontend, featuring real-time headlines stored in PostgreSQL.',
           ],
         },
         {
           title: 'AI-Powered SQL Agent',
           bullets: [
-            'Built an AI assistant that translates natural language queries into MS SQL Server statements using a dual-chain LangChain architecture with Google Gemini 2.5 Flash — first generating the correct SQL, then producing a human-readable response. In-memory schema caching (Turbo Mode) cut response time by 80%, with SELECT-only access enforced for production safety.',
+            'An AI assistant that translates natural language queries into MS SQL Server statements using a dual-chain LangChain architecture with Google Gemini 2.5 Flash — first generating the correct SQL, then producing a human-readable response. In-memory schema caching (Turbo Mode) cut response time by 80%, with SELECT-only access enforced for production safety.',
+          ],
+        },
+        {
+          title: 'FocusReceipt',
+          bullets: [
+            'A local-first iOS productivity app that converts daily activities, focus sessions, energy levels, and notes into a shareable daily receipt summary. Full CRUD activity tracking with weekly insights and visual analytics via the Charts framework. Published on the App Store.',
+          ],
+        },
+        {
+          title: 'Jotly',
+          bullets: [
+            'A minimal, local-first iOS thought journal for quickly capturing ideas, tasks, and notes. Features category-based organization and a personal timeline view for revisiting past entries, built with Swift/SwiftUI/SwiftData and MVVM. Published on the App Store.',
           ],
         },
       ],
@@ -148,11 +161,12 @@ export const translations = {
       reactNativeDesc: 'Native bridge optimizasyonuyla cross-platform geliştirme.',
       apiDesc: 'Yüksek performanslı endpoint tasarımı.',
       groups: [
-        { label: 'Mobil', items: ['React Native', 'Swift', 'SwiftUI', 'SwiftData', 'UIKit', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
+        { label: 'Mobil', items: ['React Native', 'Swift', 'SwiftUI', 'Combine', 'SwiftData', 'UIKit', 'StoreKit 2', 'AVPlayer', 'iOS', 'Android', 'CocoaPods', 'Firebase'] },
         { label: 'Diller', items: ['JavaScript', 'TypeScript', 'C#', 'Python'] },
-        { label: 'Arka Uç', items: ['.NET', 'RESTful APIs', 'MongoDB', 'PostgreSQL', 'SQL Server', 'Redis'] },
+        { label: 'Arka Uç', items: ['.NET', 'ASP.NET Core', 'SignalR', 'Entity Framework Core', 'RESTful APIs'] },
+        { label: 'Veritabanı', items: ['PostgreSQL', 'MongoDB', 'Cloud Firestore', 'SQL Server', 'Redis'] },
         { label: 'Ön Yüz', items: ['Angular', 'Next.js', 'TypeScript'] },
-        { label: 'Mimari', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'ABP Framework'] },
+        { label: 'Mimari', items: ['MVVM', 'MVC', 'Clean Architecture', 'CQRS', 'Repository Pattern', 'ABP Framework'] },
         { label: 'Yapay Zeka & Araçlar', items: ['LangChain', 'Google Gemini API', 'NL2SQL', 'Git', 'GitHub'] },
       ],
     },
@@ -223,27 +237,39 @@ export const translations = {
       title: 'Kişisel Projeler',
       items: [
         {
-          title: 'HireFlow',
+          title: 'Zynkra',
           bullets: [
-            'SwiftUI ve MVVM mimarisini kullanan native bir iOS iş başvuru takip uygulaması geliştirdi; yerel depolama için SwiftData, bulut senkronizasyonu için Firebase kullanıldı. Başvuru durumu takibi (Başvuruldu, CV Görüldü, Mülakat, Teklif) ile iş arama süreci görsel olarak yönetilebilmektedir. App Store\'da yayınlandı.',
+            'Kullanıcıların canlı odalarda senkronize müzik dinleyip video izleyebildiği ve "Vibe Radar" ile kimlik paylaşmadan benzer ruh halindeki kişileri keşfedip anonim sohbet başlatabildiği bir sosyal eğlence uygulaması. Native iOS istemcisi Swift/SwiftUI/Combine ile, gerçek zamanlı oda senkronizasyonu ve sohbet SignalR + ASP.NET Core / PostgreSQL back-end ile kuruldu; AVPlayer ve YouTube IFrame ile senkron medya oynatımı, StoreKit 2 ile abonelik akışları uygulandı. App Store\'da yayınlandı.',
           ],
         },
         {
-          title: 'FocusReceipt',
+          title: 'Blip',
           bullets: [
-            'Günlük aktiviteleri, odak sürelerini, enerji seviyelerini ve notları paylaşılabilir bir günlük makbuz özeti olarak sunan local-first bir iOS üretkenlik uygulaması geliştirdi. Tam CRUD aktivite takibi; Charts framework\'ü ile haftalık içgörüler ve görsel analitikler eklendi. App Store\'da yayınlandı.',
+            'Kullanıcıların anonim düşünce, soru ve kısa paylaşımlar yapıp gelen yanıtları kabul ederek anonim sohbet başlatabildiği ve gündem başlıkları etrafında etkileşime geçebildiği bir sosyal iOS uygulaması. MVVM ve repository pattern mimarisiyle Swift/SwiftUI/Combine kullanılarak geliştirildi; Firebase Auth, Cloud Firestore ve Sign in with Apple ile kimlik doğrulama ve veri katmanı, özel bir tasarım sistemiyle de tutarlı arayüz kuruldu. App Store\'da yayınlandı.',
           ],
         },
         {
           title: 'NewsFlow',
           bullets: [
-            'Back-end\'de .NET 10 Clean Architecture (CQRS/MediatR), front-end\'de Next.js 15 ve TypeScript kullanan full-stack bir haber toplama platformu geliştirdi; gerçek zamanlı haberler PostgreSQL\'de depolanmaktadır.',
+            'Back-end\'de .NET 10 Clean Architecture (CQRS/MediatR), front-end\'de Next.js 15 ve TypeScript kullanan full-stack bir haber toplama platformu; gerçek zamanlı manşetler PostgreSQL\'de depolanmaktadır.',
           ],
         },
         {
           title: 'Yapay Zeka Destekli SQL Asistanı',
           bullets: [
-            'Doğal dil sorgularını MS SQL Server komutlarına dönüştüren bir yapay zeka asistanı geliştirdi; çift zincirli LangChain mimarisi ve Google Gemini 2.5 Flash ile önce doğru SQL üretilmekte, ardından sonuç doğal dilde kullanıcıya sunulmaktadır. Turbo Mod ile yanıt süresi %80 azaltıldı, üretim güvenliği için yalnızca SELECT erişimi zorlandı.',
+            'Doğal dil sorgularını MS SQL Server komutlarına dönüştüren bir yapay zeka asistanı; çift zincirli LangChain mimarisi ve Google Gemini 2.5 Flash ile önce doğru SQL üretilmekte, ardından sonuç doğal dilde kullanıcıya sunulmaktadır. Turbo Mod ile yanıt süresi %80 azaltıldı, üretim güvenliği için yalnızca SELECT erişimi zorlandı.',
+          ],
+        },
+        {
+          title: 'FocusReceipt',
+          bullets: [
+            'Günlük aktiviteleri, odak sürelerini, enerji seviyelerini ve notları paylaşılabilir bir günlük makbuz özeti olarak sunan local-first bir iOS üretkenlik uygulaması. Tam CRUD aktivite takibi; Charts framework\'ü ile haftalık içgörüler ve görsel analitikler eklendi. App Store\'da yayınlandı.',
+          ],
+        },
+        {
+          title: 'Jotly',
+          bullets: [
+            'Kullanıcıların düşünce, fikir, görev ve küçük notlarını hızlıca kaydedebileceği minimal, local-first bir iOS düşünce günlüğü. Kategori bazlı organizasyon ve kişisel zaman akışıyla geçmiş düşünceleri inceleme özelliği sunar; Swift/SwiftUI/SwiftData ve MVVM ile geliştirildi. App Store\'da yayınlandı.',
           ],
         },
       ],
