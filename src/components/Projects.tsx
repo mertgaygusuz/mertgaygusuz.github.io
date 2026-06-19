@@ -16,7 +16,7 @@ type ProjectMeta = {
 
 const PROJECT_META: ProjectMeta[] = [
   {
-    tags: ['SwiftUI', 'SignalR', 'StoreKit 2'],
+    tags: ['SwiftUI', 'SignalR', 'ASP.NET Core'],
     color: 'primary',
     gradient: 'from-[#1a1410] to-[#0d0a07]',
     icon: 'graphic_eq',

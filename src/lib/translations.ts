@@ -10,7 +10,7 @@ export const translations = {
     },
     hero: {
       title: 'Mert Gaygusuz',
-      role: 'Full-Stack Developer with end-to-end experience — from scalable .NET back-end systems to high-performance React Native and native iOS interfaces.',
+      role: 'Full-stack developer with end-to-end experience — from scalable .NET backend systems to high-performance React Native and native iOS interfaces.',
       bio: 'Full-Stack Developer with 2+ years of .NET back-end experience, now specializing in mobile development with React Native and native iOS (Swift/SwiftUI). Experienced in end-to-end product delivery — from architecting scalable REST APIs and back-end systems to shipping high-performance cross-platform mobile interfaces. Proven ability to integrate AI capabilities into production applications, including building an NL2SQL Agent from scratch.',
       location: 'Istanbul, Turkey',
       email: 'mertgaygusuz@hotmail.com',
