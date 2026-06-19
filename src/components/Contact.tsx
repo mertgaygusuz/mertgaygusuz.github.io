@@ -7,7 +7,7 @@ export function Contact() {
   const { lang, t } = useLanguage()
 
   return (
-    <section className="py-24 px-6 border-t border-outline-variant/10" id="contact">
+    <section className="py-24 px-6 border-t border-outline-variant/10" id="education">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between gap-12">
 
         {/* Education */}
@@ -32,10 +32,11 @@ export function Contact() {
 
         {/* Contact card */}
         <motion.div
+          id="contact"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="flex-1 max-w-xl"
+          className="flex-1 max-w-xl scroll-mt-28"
         >
           <div className="bg-surface-container-low p-12 rounded-[2.5rem] border border-outline-variant/20">
             <span className="material-symbols-outlined text-primary text-5xl mb-6 block">auto_awesome</span>

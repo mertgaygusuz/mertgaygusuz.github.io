@@ -6,9 +6,51 @@ import { Providers } from '@/components/Providers'
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space-grotesk' })
 
+const SITE_URL = 'https://mertgaygusuz.github.io'
+
 export const metadata: Metadata = {
-  title: 'Mert Gaygusuz — React Native & iOS Developer',
-  description: 'React Native & iOS Developer | Mobile-first, backend-rooted.',
+  metadataBase: new URL(SITE_URL),
+  title: 'Mert Gaygusuz — Full-Stack Developer (React Native & iOS & .NET)',
+  description:
+    'Full-Stack Developer specializing in React Native and native iOS (Swift/SwiftUI), rooted in 2+ years of .NET back-end. Independent developer of 4 iOS apps published on the App Store.',
+  keywords: [
+    'Mert Gaygusuz',
+    'Full-Stack Developer',
+    'React Native',
+    'iOS',
+    'Swift',
+    'SwiftUI',
+    '.NET',
+    'C#',
+    'Mobile Developer',
+    'Istanbul',
+  ],
+  authors: [{ name: 'Mert Gaygusuz', url: SITE_URL }],
+  creator: 'Mert Gaygusuz',
+  alternates: { canonical: SITE_URL },
+  openGraph: {
+    type: 'website',
+    url: SITE_URL,
+    siteName: 'Mert Gaygusuz',
+    title: 'Mert Gaygusuz — Full-Stack Developer (React Native & iOS & .NET)',
+    description:
+      'React Native & native iOS developer with a .NET back-end foundation. 4 iOS apps live on the App Store.',
+    images: [
+      {
+        url: '/og.png',
+        width: 1200,
+        height: 630,
+        alt: 'Mert Gaygusuz — Full-Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Mert Gaygusuz — Full-Stack Developer (React Native & iOS & .NET)',
+    description:
+      'React Native & native iOS developer with a .NET back-end foundation. 4 iOS apps live on the App Store.',
+    images: ['/og.png'],
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

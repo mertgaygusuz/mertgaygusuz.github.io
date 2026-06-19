@@ -14,6 +14,14 @@ export const translations = {
       email: 'mertgaygusuz@hotmail.com',
       phone: '+90 537 451 2329',
     },
+    stats: {
+      items: [
+        { value: '4', label: 'Apps on the App Store' },
+        { value: '100+', label: 'REST Endpoints Shipped' },
+        { value: '2+', label: 'Years of .NET' },
+        { value: '80%', label: 'Faster AI Query Engine' },
+      ],
+    },
     skills: {
       title: 'Skills',
       reactNativeDesc: 'Cross-platform development with native bridge optimization.',
@@ -155,6 +163,14 @@ export const translations = {
       location: 'İstanbul, Türkiye',
       email: 'mertgaygusuz@hotmail.com',
       phone: '+90 537 451 2329',
+    },
+    stats: {
+      items: [
+        { value: '4', label: "App Store'da Uygulama" },
+        { value: '100+', label: 'REST Endpoint Geliştirildi' },
+        { value: '2+', label: 'Yıl .NET Deneyimi' },
+        { value: '80%', label: 'Daha Hızlı AI Sorgu Motoru' },
+      ],
     },
     skills: {
       title: 'Beceriler',

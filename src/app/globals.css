@@ -92,6 +92,12 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Keep anchored sections clear of the fixed navbar on jump */
+section[id],
+[id].scroll-mt-28 {
+  scroll-margin-top: 6rem;
+}
+
 body {
   background-color: var(--background);
   color: var(--on-surface);
