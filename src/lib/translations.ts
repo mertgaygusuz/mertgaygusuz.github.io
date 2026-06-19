@@ -5,12 +5,12 @@ export const translations = {
       experience: 'Experience',
       projects: 'Projects',
       contact: 'Contact',
-      resume: 'Résumé',
+      resume: 'Resume',
       downloadCv: 'Download CV',
     },
     hero: {
       title: 'Mert Gaygusuz',
-      role: 'Full-Stack Developer with end-to-end experience — from scalable .NET back-end systems to high-performance React Native and native iOS interfaces.',
+      role: 'Full-Stack Developer specializing in React Native and native iOS (Swift/SwiftUI), rooted in 2+ years of .NET back-end — independent developer of multiple iOS apps on the App Store.',
       bio: 'Full-Stack Developer with 2+ years of .NET back-end experience, now specializing in mobile development with React Native and native iOS (Swift/SwiftUI). Experienced in end-to-end product delivery — from architecting scalable REST APIs and back-end systems to shipping high-performance cross-platform mobile interfaces. Proven ability to integrate AI capabilities into production applications, including building an NL2SQL Agent from scratch.',
       location: 'Istanbul, Turkey',
       email: 'mertgaygusuz@hotmail.com',
@@ -161,7 +161,7 @@ export const translations = {
     },
     hero: {
       title: 'Mert Gaygusuz',
-      role: 'Ölçeklenebilir .NET back-end sistemlerinden yüksek performanslı React Native ve native iOS arayüzlerine kadar uçtan uca deneyime sahip Full-Stack Geliştirici.',
+      role: 'React Native ve native iOS (Swift/SwiftUI) alanında uzmanlaşmış, 2+ yıl .NET back-end temeline sahip Full-Stack Geliştirici — App Store\'da yayınlanmış birden fazla iOS uygulamasının bağımsız geliştiricisi.',
       bio: '2+ yıllık .NET back-end deneyimine sahip, React Native ve native iOS (Swift/SwiftUI) ile mobil geliştirme alanında uzmanlaşmakta olan Full-Stack Geliştirici. Ölçeklenebilir REST API\'ler ve back-end sistemler tasarlamaktan yüksek performanslı cross-platform mobil arayüzler geliştirmeye kadar uçtan uca ürün sahipleniminde deneyimlidir. Yapısal NL2SQL Agent geliştirme dahil, yapay zeka yeteneklerini üretim uygulamalarına entegre etme konusunda kanıtlanmış yetkinliğe sahiptir.',
       location: 'İstanbul, Türkiye',
       email: 'mertgaygusuz@hotmail.com',

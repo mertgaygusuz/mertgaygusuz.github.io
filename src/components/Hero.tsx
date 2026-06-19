@@ -20,10 +20,10 @@ export function Hero() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
             >
               <p className="font-label text-secondary uppercase tracking-[0.25em] text-sm mb-6">
-                Full-Stack Developer (React Native &amp; iOS &amp; .NET)
+                Full-Stack Mobile Developer · iOS · React Native · .NET
               </p>
 
-              <h1 className="font-headline font-black text-6xl md:text-8xl lg:text-9xl leading-[0.9] tracking-tight mb-8">
+              <h1 className="font-headline font-black text-5xl md:text-7xl lg:text-8xl leading-[0.9] tracking-tight mb-8">
                 <span className="block">MERT</span>
                 <span className="text-primary italic">GAYGUSUZ</span>
               </h1>
@@ -75,25 +75,18 @@ export function Hero() {
                   <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
                   <div className="w-3 h-3 rounded-full bg-green-500/60" />
                 </div>
-                <div className="space-y-1 opacity-70">
-                  <div><span className="text-secondary">import</span> <span className="text-primary">React</span> <span className="text-on-surface-variant">from</span> <span className="text-secondary">&apos;react&apos;</span></div>
-                  <div><span className="text-secondary">import</span> <span className="text-on-surface-variant">{'{'}</span> <span className="text-primary">View, Text</span> <span className="text-on-surface-variant">{'}'}</span> <span className="text-secondary">from</span> <span className="text-secondary">&apos;react-native&apos;</span></div>
-                  <div className="mt-3"><span className="text-secondary">const</span> <span className="text-primary">App</span> <span className="text-on-surface-variant">= () =&gt;</span> <span className="text-on-surface-variant">{'{'}</span></div>
-                  <div className="ml-4"><span className="text-secondary">return</span> <span className="text-on-surface-variant">{'('}</span></div>
-                  <div className="ml-8"><span className="text-outline">&lt;</span><span className="text-primary">View</span></div>
-                  <div className="ml-10 text-outline">style={'{'}styles.container{'}'}</div>
-                  <div className="ml-8"><span className="text-outline">&gt;</span></div>
-                  <div className="ml-10"><span className="text-outline">&lt;</span><span className="text-primary">Text</span><span className="text-outline">&gt;</span></div>
-                  <div className="ml-12 text-secondary">Hello, World!</div>
-                  <div className="ml-10"><span className="text-outline">&lt;/</span><span className="text-primary">Text</span><span className="text-outline">&gt;</span></div>
-                  <div className="ml-8"><span className="text-outline">&lt;/</span><span className="text-primary">View</span><span className="text-outline">&gt;</span></div>
-                  <div className="ml-4"><span className="text-on-surface-variant">{')'}</span></div>
-                  <div><span className="text-on-surface-variant">{'}'}</span></div>
-                  <div className="mt-3 text-on-surface-variant opacity-50">{'// Swift'}</div>
+                <div className="space-y-1 opacity-80">
                   <div><span className="text-secondary">import</span> <span className="text-primary">SwiftUI</span></div>
-                  <div className="mt-1"><span className="text-secondary">struct</span> <span className="text-primary">ContentView</span><span className="text-on-surface-variant">: View {'{'}</span></div>
-                  <div className="ml-4"><span className="text-secondary">var</span> body<span className="text-on-surface-variant">: some View {'{'}</span></div>
-                  <div className="ml-8"><span className="text-primary">Text</span><span className="text-on-surface-variant">(</span><span className="text-secondary">&quot;Hello&quot;</span><span className="text-on-surface-variant">)</span></div>
+                  <div className="mt-3"><span className="text-secondary">struct</span> <span className="text-primary">VibeRadarView</span><span className="text-on-surface-variant">: </span><span className="text-primary">View</span> <span className="text-on-surface-variant">{'{'}</span></div>
+                  <div className="ml-4"><span className="text-secondary">@State</span> <span className="text-secondary">private</span> <span className="text-secondary">var</span> <span className="text-on-surface-variant">isLive = </span><span className="text-secondary">true</span></div>
+                  <div className="ml-4 mt-2"><span className="text-secondary">var</span> <span className="text-on-surface-variant">body: </span><span className="text-secondary">some</span> <span className="text-primary">View</span> <span className="text-on-surface-variant">{'{'}</span></div>
+                  <div className="ml-8"><span className="text-primary">VStack</span><span className="text-on-surface-variant">(spacing: </span><span className="text-secondary">16</span><span className="text-on-surface-variant">) {'{'}</span></div>
+                  <div className="ml-12"><span className="text-primary">Text</span><span className="text-on-surface-variant">(</span><span className="text-secondary">&quot;Vibe Radar&quot;</span><span className="text-on-surface-variant">)</span></div>
+                  <div className="ml-16 text-on-surface-variant">.font(<span className="text-primary">.title</span>.bold())</div>
+                  <div className="ml-12"><span className="text-primary">Toggle</span><span className="text-on-surface-variant">(</span><span className="text-secondary">&quot;Live&quot;</span><span className="text-on-surface-variant">, isOn: $isLive)</span></div>
+                  <div className="ml-8"><span className="text-on-surface-variant">{'}'}</span></div>
+                  <div className="ml-8 text-on-surface-variant">.padding()</div>
+                  <div className="ml-8 text-on-surface-variant">.task {'{'} <span className="text-secondary">await</span> loadVibes() {'}'}</div>
                   <div className="ml-4"><span className="text-on-surface-variant">{'}'}</span></div>
                   <div><span className="text-on-surface-variant">{'}'}</span></div>
                 </div>

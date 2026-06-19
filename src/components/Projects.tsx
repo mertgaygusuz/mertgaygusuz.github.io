@@ -16,7 +16,7 @@ type ProjectMeta = {
 
 const PROJECT_META: ProjectMeta[] = [
   {
-    tags: ['SwiftUI', 'SignalR', 'StoreKit 2'],
+    tags: ['SwiftUI', 'SignalR', 'ASP.NET Core'],
     color: 'primary',
     gradient: 'from-[#1a1410] to-[#0d0a07]',
     icon: 'graphic_eq',
@@ -129,22 +129,20 @@ export function Projects() {
                     </span>
                   )}
 
-                  {/* Tag badges */}
-                  <div className="absolute top-6 left-6 flex flex-wrap gap-2">
+                  {/* Tag badges + App Store marker share one wrapping row */}
+                  <div className="absolute top-5 left-5 right-5 flex flex-wrap items-start gap-2">
                     {meta.tags.map(tag => (
-                      <span key={tag} className={`backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold font-label uppercase ${tagBg}`}>
+                      <span key={tag} className={`backdrop-blur-md px-3 py-1 rounded-full text-[0.65rem] font-bold font-label uppercase whitespace-nowrap ${tagBg}`}>
                         {tag}
                       </span>
                     ))}
+                    {meta.appStore && (
+                      <div className="ml-auto flex items-center gap-1.5 bg-white/10 backdrop-blur-md text-white/90 px-3 py-1 rounded-full text-[0.65rem] font-bold font-label uppercase tracking-wider whitespace-nowrap">
+                        <AppleGlyph />
+                        App Store
+                      </div>
+                    )}
                   </div>
-
-                  {/* App Store marker */}
-                  {meta.appStore && (
-                    <div className="absolute top-6 right-6 flex items-center gap-1.5 bg-white/10 backdrop-blur-md text-white/90 px-3 py-1 rounded-full text-[0.65rem] font-bold font-label uppercase tracking-wider">
-                      <AppleGlyph />
-                      App Store
-                    </div>
-                  )}
                 </div>
 
                 {/* Content */}
