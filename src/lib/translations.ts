@@ -16,10 +16,9 @@ export const translations = {
     },
     stats: {
       items: [
-        { value: '4', label: 'Apps on the App Store' },
-        { value: '100+', label: 'REST Endpoints Shipped' },
-        { value: '2+', label: 'Years of .NET' },
-        { value: '80%', label: 'Faster AI Query Engine' },
+        '4 apps live on the App Store',
+        '2+ years of .NET back-end',
+        'React Native & native iOS',
       ],
     },
     skills: {
@@ -166,10 +165,9 @@ export const translations = {
     },
     stats: {
       items: [
-        { value: '4', label: "App Store'da Uygulama" },
-        { value: '100+', label: 'REST Endpoint Geliştirildi' },
-        { value: '2+', label: 'Yıl .NET Deneyimi' },
-        { value: '80%', label: 'Daha Hızlı AI Sorgu Motoru' },
+        "App Store'da 4 yayınlanmış uygulama",
+        '2+ yıl .NET back-end',
+        'React Native & native iOS',
       ],
     },
     skills: {
