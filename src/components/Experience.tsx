@@ -9,7 +9,7 @@ export function Experience() {
   const isEn = lang === 'en'
 
   return (
-    <section className="px-6 py-24 md:py-28" id="experience">
+    <section className="relative px-6 py-24 md:py-28" id="experience">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
 
@@ -71,7 +71,7 @@ export function Experience() {
               {t.certificates.title}
             </div>
             {t.certificates.items.map((cert, i) => (
-              <div key={i} className="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10 max-w-2xl">
+              <div key={i} className="max-w-2xl rounded-[1.5rem] border border-outline-variant/10 bg-surface-container-low p-8">
                 <h3 className="text-xl font-bold text-on-surface">{cert.name}</h3>
                 <p className="text-secondary mt-1 text-sm font-label">{cert.issuer}</p>
                 <p className="text-on-surface-variant mt-2 leading-relaxed">{cert.description}</p>

@@ -20,9 +20,9 @@ function Phone({
       initial={{ opacity: 0, y: 40, scale: 0.96 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.9, delay, ease: [0.22, 1, 0.36, 1] }}
-      className={`absolute rounded-[2.4rem] bg-[#08080a] p-[5px] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10 ${className}`}
+      className={`absolute rounded-[1.8rem] bg-[#08080a] p-[5px] shadow-[0_30px_70px_-15px_rgba(0,0,0,0.6)] ring-1 ring-white/10 ${className}`}
     >
-      <div className="relative overflow-hidden rounded-[2rem] bg-black">
+      <div className="relative overflow-hidden rounded-[1.45rem] bg-black">
         <Image src={src} alt={alt} width={560} height={1217} className="w-full h-auto" />
       </div>
     </motion.div>
@@ -94,6 +94,30 @@ export function Hero() {
           </div>
         </motion.div>
 
+        {/* Mobile — keep one product proof point in the first viewport. */}
+        <div className="relative mx-auto h-[350px] w-full max-w-[250px] lg:hidden">
+          <div
+            aria-hidden="true"
+            className="absolute left-1/2 top-[42%] h-56 w-56 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+            style={{ background: 'radial-gradient(circle, rgba(255,122,26,0.24), transparent 68%)' }}
+          />
+          <Phone
+            src="/projects/zynkra-room.png"
+            alt="Zynkra — synchronized room screen"
+            delay={0.25}
+            className="left-1/2 top-0 z-10 w-[158px] -translate-x-1/2 -rotate-[2deg]"
+          />
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.65 }}
+            className="absolute bottom-0 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 rounded-lg border border-outline-variant/30 bg-surface-container/85 px-3.5 py-2 text-[0.7rem] font-semibold whitespace-nowrap backdrop-blur-md"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+            {isEn ? 'Zynkra · live on the App Store' : "Zynkra · App Store'da yayında"}
+          </motion.div>
+        </div>
+
         {/* Right — product showcase */}
         <div className="relative hidden h-[520px] lg:block">
           {/* warm glow */}
@@ -102,26 +126,25 @@ export function Hero() {
             style={{ background: 'radial-gradient(circle, rgba(255,122,26,0.22), transparent 65%)' }}
           />
 
-          {/* back phone — Blip */}
+          {/* Supporting products stay deliberately quieter than the flagship. */}
           <Phone
             src="/projects/blip-feed.png"
             alt="Blip — anonymous social feed"
             delay={0.35}
-            className="left-2 top-28 z-0 w-[150px] -rotate-[9deg]"
+            className="left-3 top-32 z-0 hidden w-[128px] -rotate-[8deg] opacity-55 xl:block"
           />
-          {/* back phone — Jotly */}
           <Phone
             src="/projects/jotly-home.png"
             alt="Jotly — thought journal home screen"
             delay={0.45}
-            className="right-2 top-24 z-0 w-[152px] rotate-[9deg]"
+            className="right-3 top-28 z-0 hidden w-[130px] rotate-[8deg] opacity-55 xl:block"
           />
           {/* front phone — Zynkra synced room */}
           <Phone
             src="/projects/zynkra-room.png"
             alt="Zynkra — synchronized room screen"
             delay={0.2}
-            className="left-1/2 top-2 z-10 w-[214px] -translate-x-1/2 -rotate-[3deg]"
+            className="left-1/2 top-2 z-10 w-[220px] -translate-x-1/2 -rotate-[2deg]"
           />
 
           {/* caption chip */}
@@ -129,7 +152,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-full border border-outline-variant/30 bg-surface-container/80 px-4 py-2 text-[0.7rem] font-semibold whitespace-nowrap backdrop-blur-md"
+            className="absolute bottom-2 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2 rounded-lg border border-outline-variant/30 bg-surface-container/80 px-3.5 py-2 text-[0.7rem] font-semibold whitespace-nowrap backdrop-blur-md"
           >
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             {isEn ? 'Zynkra · Blip · Jotly · live on the App Store' : "Zynkra · Blip · Jotly · App Store'da yayında"}

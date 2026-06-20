@@ -77,8 +77,9 @@ export function Projects() {
   const isEn = lang === 'en'
 
   return (
-    <section className="bg-surface-container px-6 py-24 md:py-28" id="work">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative overflow-hidden bg-surface-container px-6 py-24 md:py-28" id="work">
+      <div aria-hidden="true" className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-primary/10 blur-3xl" />
+      <div className="relative mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
