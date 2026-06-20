@@ -41,6 +41,17 @@ export const translations = {
       title: 'Work Experience',
       items: [
         {
+          role: 'Indie iOS Developer',
+          company: 'Self-employed',
+          period: '05/2026 – Present',
+          location: 'Remote',
+          bullets: [
+            'Build independent mobile apps for the App Store using SwiftUI and modern iOS technologies, taking ownership across product strategy, UI/UX, development, testing, App Store release, and marketing.',
+            'Shipped Zynkra, Blip, FocusReceipt, and Jotly. Zynkra combines a native SwiftUI/Combine client with a real-time SignalR + ASP.NET Core / EF Core / PostgreSQL backend, synchronized media playback via AVPlayer and the YouTube IFrame API, and StoreKit 2 subscriptions.',
+            'Work actively with SwiftUI, SwiftData, CloudKit, Firebase, RESTful APIs, real-time synchronization, StoreKit, MVVM/Clean Architecture, localization, and App Store optimization—focusing on clear product design, high-performance mobile architecture, and release-ready quality.',
+          ],
+        },
+        {
           role: 'Full-Stack Developer (React Native & .NET)',
           company: 'F4e',
           period: '01/2026 – 05/2026',
@@ -191,6 +202,17 @@ export const translations = {
     experience: {
       title: 'İş Deneyimi',
       items: [
+        {
+          role: 'Indie iOS Developer',
+          company: 'Bağımsız',
+          period: '05/2026 – Günümüz',
+          location: 'Uzaktan',
+          bullets: [
+            'SwiftUI ve modern iOS teknolojileriyle App Store’a yönelik bağımsız mobil uygulamalar geliştiriyorum; ürün stratejisi, UI/UX, geliştirme, test, App Store yayını ve pazarlama süreçlerini uçtan uca yönetiyorum.',
+            'App Store’da Zynkra, Blip, FocusReceipt ve Jotly uygulamalarını yayınladım. Zynkra’da native SwiftUI/Combine istemcisini SignalR + ASP.NET Core / EF Core / PostgreSQL gerçek zamanlı backend’iyle birleştirdim; AVPlayer ve YouTube IFrame API ile senkron oynatma, StoreKit 2 ile abonelik akışları geliştirdim.',
+            'SwiftUI, SwiftData, CloudKit, Firebase, RESTful API entegrasyonları, gerçek zamanlı senkronizasyon, StoreKit, MVVM/Clean Architecture, yerelleştirme ve App Store optimizasyonu üzerine aktif olarak çalışıyorum; sade ürün tasarımı, performanslı mobil mimari ve yayınlanabilir ürün kalitesine odaklanıyorum.',
+          ],
+        },
         {
           role: 'Full-Stack Geliştirici (React Native & .NET)',
           company: 'F4e',

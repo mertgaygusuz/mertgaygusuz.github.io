@@ -77,21 +77,21 @@ export function Projects() {
   const isEn = lang === 'en'
 
   return (
-    <section className="bg-surface-container py-32 px-6" id="work">
+    <section className="bg-surface-container px-6 py-24 md:py-28" id="work">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 max-w-3xl"
+          className="mb-12 max-w-3xl"
         >
           <SectionLabel num="01" label={isEn ? 'Selected Work' : 'Seçili Projeler'} />
-          <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
             {isEn ? 'Things I’ve shipped' : 'Geliştirdiklerim'}
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
           {t.projects.items.map((project, i) => {
             const meta = PROJECT_META[i]
             const colorClass = meta.color === 'primary' ? 'hover:border-primary' : 'hover:border-secondary'
@@ -105,7 +105,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-                className={`group bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 ${colorClass}`}
+                className={`group overflow-hidden rounded-[1.5rem] border border-outline-variant/10 bg-surface-container-low transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-primary/10 ${colorClass}`}
               >
                 {/* Visual header */}
                 <div className={`aspect-video bg-gradient-to-br ${meta.gradient} overflow-hidden relative flex items-center justify-center`}>
@@ -145,9 +145,9 @@ export function Projects() {
                 </div>
 
                 {/* Content */}
-                <div className="p-10">
-                  <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
-                  <p className="text-on-surface-variant mb-8 text-lg leading-relaxed">
+                <div className="p-8 md:p-9">
+                  <h3 className="mb-3 text-2xl font-bold">{project.title}</h3>
+                  <p className="mb-7 text-base leading-relaxed text-on-surface-variant">
                     {project.bullets[0]}
                   </p>
                   {meta.github ? (

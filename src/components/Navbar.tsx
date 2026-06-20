@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <header className="fixed top-0 z-50 w-full backdrop-blur-xl bg-background/90 border-b border-outline-variant/20">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-[4.5rem] flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 hero-gradient flex items-center justify-center rounded-xl">
@@ -26,11 +26,11 @@ export function Navbar() {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-10">
-          <a href="#work" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.projects}</a>
-          <a href="#experience" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.experience}</a>
-          <a href="#skills" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.skills}</a>
-          <a href={cvHref} download={cvFile} className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest flex items-center gap-1.5">
+        <nav className="hidden md:flex items-center gap-8">
+          <a href="#work" className="text-on-surface-variant hover:text-primary transition-colors font-label text-xs uppercase tracking-[0.16em]">{t.nav.projects}</a>
+          <a href="#experience" className="text-on-surface-variant hover:text-primary transition-colors font-label text-xs uppercase tracking-[0.16em]">{t.nav.experience}</a>
+          <a href="#skills" className="text-on-surface-variant hover:text-primary transition-colors font-label text-xs uppercase tracking-[0.16em]">{t.nav.skills}</a>
+          <a href={cvHref} download={cvFile} className="text-on-surface-variant hover:text-primary transition-colors font-label text-xs uppercase tracking-[0.16em] flex items-center gap-1.5">
             {t.nav.resume}
             <span className="text-xs">↓</span>
           </a>
@@ -63,7 +63,7 @@ export function Navbar() {
 
           <a
             href="#contact"
-            className="bg-primary px-6 py-2.5 rounded-full font-bold text-on-primary text-sm hover:-translate-y-0.5 transition-transform"
+            className="bg-primary px-5 py-2.5 rounded-full font-bold text-on-primary text-sm hover:-translate-y-0.5 transition-transform"
           >
             {t.nav.contact}
           </a>

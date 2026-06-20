@@ -9,8 +9,8 @@ export function Contact() {
   const isEn = lang === 'en'
 
   return (
-    <section className="py-28 px-6 border-t border-outline-variant/10" id="education">
-      <div className="max-w-7xl mx-auto grid gap-16 md:grid-cols-[0.9fr_1.1fr]">
+    <section className="border-t border-outline-variant/10 px-6 py-24 md:py-28" id="education">
+      <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.9fr_1.1fr]">
 
         {/* Education */}
         <div>
@@ -40,7 +40,7 @@ export function Contact() {
           viewport={{ once: true }}
           className="scroll-mt-28"
         >
-          <div className="bg-surface-container-low p-10 md:p-12 rounded-[2.5rem] border border-outline-variant/20">
+          <div className="rounded-[2rem] border border-outline-variant/20 bg-surface-container-low p-8 md:p-10">
             <SectionLabel num="04" label={isEn ? 'Get in touch' : 'İletişim'} />
             <h3 className="text-3xl md:text-4xl font-extrabold tracking-tight mb-6 leading-[1.05]">
               {isEn ? 'Let’s build something together.' : 'Birlikte bir şeyler inşa edelim.'}

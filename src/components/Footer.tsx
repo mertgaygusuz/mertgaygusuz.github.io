@@ -7,7 +7,7 @@ export function Footer() {
   const isEn = lang === 'en'
 
   return (
-    <footer className="bg-surface-container-lowest py-20 px-6 border-t border-outline-variant/10">
+    <footer className="border-t border-outline-variant/10 bg-surface-container-lowest px-6 py-14 md:py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
 
