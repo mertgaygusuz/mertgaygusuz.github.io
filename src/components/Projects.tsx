@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
+import { SectionLabel } from '@/components/SectionLabel'
 
 type ProjectMeta = {
   tags: string[]
@@ -82,13 +83,11 @@ export function Projects() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mb-16 max-w-3xl"
         >
-          <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
-            {isEn ? 'Portfolio Highlights' : 'Öne Çıkan Projeler'}
-          </span>
-          <h2 className="text-6xl font-black tracking-tighter">
-            {isEn ? 'Digital Builds' : 'Projeler'}
+          <SectionLabel num="01" label={isEn ? 'Selected Work' : 'Seçili Projeler'} />
+          <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+            {isEn ? 'Things I’ve shipped' : 'Geliştirdiklerim'}
           </h2>
         </motion.div>
 
@@ -106,7 +105,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: (i % 2) * 0.1 }}
-                className={`group bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/10 transition-all duration-300 ${colorClass}`}
+                className={`group bg-surface-container-low rounded-[2rem] overflow-hidden border border-outline-variant/10 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-primary/10 ${colorClass}`}
               >
                 {/* Visual header */}
                 <div className={`aspect-video bg-gradient-to-br ${meta.gradient} overflow-hidden relative flex items-center justify-center`}>
@@ -124,8 +123,8 @@ export function Projects() {
                       />
                     </div>
                   ) : (
-                    <span className="material-symbols-outlined text-8xl opacity-10 text-white transition-transform duration-500 group-hover:scale-110">
-                      {meta.icon}
+                    <span className="font-headline text-[7rem] font-extrabold leading-none text-white/10 transition-transform duration-500 group-hover:scale-110">
+                      {project.title.charAt(0)}
                     </span>
                   )}
 
@@ -156,10 +155,10 @@ export function Projects() {
                       href={meta.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm hover:gap-4 transition-all ${linkColor}`}
+                      className={`inline-flex items-center gap-2 font-bold uppercase tracking-widest text-sm hover:gap-3 transition-all ${linkColor}`}
                     >
                       {isEn ? 'Explore Project' : 'Projeyi İncele'}
-                      <span className="material-symbols-outlined text-base">open_in_new</span>
+                      <span>↗</span>
                     </a>
                   ) : meta.appStore ? (
                     <span className={`inline-flex items-center gap-2 font-black uppercase tracking-widest text-sm ${linkColor}`}>

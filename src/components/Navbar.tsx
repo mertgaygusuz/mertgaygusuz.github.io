@@ -32,7 +32,7 @@ export function Navbar() {
           <a href="#skills" className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest">{t.nav.skills}</a>
           <a href={cvHref} download={cvFile} className="text-on-surface-variant hover:text-primary transition-colors font-label text-sm uppercase tracking-widest flex items-center gap-1.5">
             {t.nav.resume}
-            <span className="material-symbols-outlined text-base leading-none">download</span>
+            <span className="text-xs">↓</span>
           </a>
 
           {/* Lang toggle */}
@@ -63,7 +63,7 @@ export function Navbar() {
 
           <a
             href="#contact"
-            className="hero-gradient px-6 py-2 rounded-lg font-label font-bold text-on-primary-fixed text-sm"
+            className="bg-primary px-6 py-2.5 rounded-full font-bold text-on-primary text-sm hover:-translate-y-0.5 transition-transform"
           >
             {t.nav.contact}
           </a>
@@ -107,7 +107,7 @@ export function Navbar() {
             className="text-primary font-label text-sm uppercase tracking-widest py-3 border-b border-outline-variant/20 flex items-center gap-2"
           >
             {t.nav.downloadCv}
-            <span className="material-symbols-outlined text-base leading-none">download</span>
+            <span className="text-xs">↓</span>
           </a>
 
           <div className="flex items-center justify-between pt-4 mt-1">

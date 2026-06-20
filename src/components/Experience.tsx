@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useLanguage } from '@/context/LanguageContext'
+import { SectionLabel } from '@/components/SectionLabel'
 
 export function Experience() {
   const { t, lang } = useLanguage()
@@ -15,16 +16,14 @@ export function Experience() {
           {/* Sticky left column */}
           <div className="lg:col-span-4">
             <div className="sticky top-32">
-              <span className="font-label text-secondary uppercase tracking-[0.3em] text-sm block mb-4">
-                {isEn ? 'Professional History' : 'Kariyer Geçmişi'}
-              </span>
-              <h2 className="text-6xl font-black tracking-tighter mb-8 leading-none">
-                {isEn ? 'The Journey' : 'Kariyer'}
+              <SectionLabel num="03" label={isEn ? 'Experience' : 'Deneyim'} />
+              <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-[0.95]">
+                {isEn ? 'Where I’ve worked' : 'Çalıştığım yerler'}
               </h2>
-              <p className="text-on-surface-variant text-lg font-label">
+              <p className="text-on-surface-variant text-lg">
                 {isEn
-                  ? 'A chronological evolution through the tech ecosystem.'
-                  : 'Teknoloji ekosistemindeki kronolojik bir gelişim yolculuğu.'}
+                  ? 'From .NET back-ends to shipping mobile products.'
+                  : '.NET back-end’lerden mobil ürün geliştirmeye.'}
               </p>
             </div>
           </div>
@@ -68,12 +67,11 @@ export function Experience() {
             viewport={{ once: true }}
             className="mt-24 border-t border-outline-variant/20 pt-16"
           >
-            <span className="font-label text-primary uppercase tracking-[0.3em] text-sm block mb-4">
+            <div className="font-label text-xs uppercase tracking-[0.25em] text-on-surface-variant mb-5">
               {t.certificates.title}
-            </span>
+            </div>
             {t.certificates.items.map((cert, i) => (
               <div key={i} className="bg-surface-container-low p-8 rounded-3xl border border-outline-variant/10 max-w-2xl">
-                <span className="material-symbols-outlined text-primary text-3xl mb-4 block">workspace_premium</span>
                 <h3 className="text-xl font-bold text-on-surface">{cert.name}</h3>
                 <p className="text-secondary mt-1 text-sm font-label">{cert.issuer}</p>
                 <p className="text-on-surface-variant mt-2 leading-relaxed">{cert.description}</p>
